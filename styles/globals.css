@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@400&family=Ubuntu&display=swap');
+:root {
+	--text_light: #ebe8e1;
+	--text_dark: #130e01;
+	--background: #ffffff;
+	--primary: hsl(350, 73%, 35%);
+	--primary_fade: hsla(350, 73%, 35%, 0.2);
+	--primary_darker: hsl(350, 73%, 30%);
+	--secondary: hsl(39, 60%, 50%);
+	--secondary_fade: hsla(39, 60%, 50%, 0.2);
+	--secondary_darker: hsl(39, 60%, 45%);
+	--accent: #cc4933;
+	--fade1: rgba(0, 0, 0, 0.1);
+	--fade2: rgba(0, 0, 0, 0.05);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Ubuntu';
+	background-color: var(--background);
+	color: var(--text_dark);
+	min-height: 100vh;
+}
+a {
+	text-decoration: none;
+	color: var(--accent);
+}
+a:hover {
+	text-decoration: underline;
+}
+h1,h2,h3,h4,h5 {
+	font-family: 'Trispace';
+	text-wrap: balance;
+}
+/* typescaled using https://realtimecolors.com */
+html  {font-size: 100%;}    /* 16px */
+h1    {font-size: 3.053rem; /* 48.8px */}
+h2    {font-size: 2.442rem; /* 39.04px */}
+h3    {font-size: 1.954rem; /* 31.2px */}
+h4    {font-size: 1.563rem; /* 24.96px */}
+h5    {font-size: 1.250rem; /* 20px */}
+small {font-size: 0.800rem; /* 12.8px */}
+
+input, button {
+	outline: none;
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	padding: 0.5rem;
+	border-radius: 5px;
+	text-wrap: nowrap;
+}
+
+header nav,
+footer {
+	background-color: #eee;
+	padding: 1rem 0;
+	border: 1px solid #ddd;
+}
+.bg-primary {
+	background-color: var(--primary);
+	color: var(--text_light);
+	transition: background-color 0.2s ease;
+}
+.bg-primary:hover {
+	background-color: var(--primary_darker);
+}
+.bg-secondary {
+	background-color: var(--secondary);
+	color: var(--text_light);
+}
+.bg-secondary:hover {
+	background-color: var(--secondary_darker);
+}
+nav {
+	display: flex;
+	align-items: center;
+	& log-in {
+		margin-right: 2rem;
+		margin-left: auto;
+	}
+	& ul {
+		list-style: none;
+		& > * {
+			display: inline-block;
+			margin-left: clamp(2rem, 6vw, 5rem);
+		}
+	}
+}
