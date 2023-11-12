@@ -5,10 +5,10 @@
 		pdf reader
 		animations
 */
-import { shuffle } from '/scripts/utils.js'
+import { setLocalData, getLocalData, generatePastels } from '/scripts/utils.js'
 
-const colors = getData('colors') || generatePastels()
-const courses = getData('courses') || []
+const colors = getLocalData('colors') || generatePastels()
+const courses = getLocalData('courses') || []
 const cardBox = document.querySelector('.card-container')
 const inactive = new CourseCard(CourseCard.defaultCourse, false)
 
@@ -26,24 +26,24 @@ if (auth) init()
 
 function init() {
 	courses.forEach(courseData => {
-		const card = new CourseCard()
+		const card = new CourseCard(courseData)
 		cardBox.append(card)
 	})
 	renderCards()
 }
 function addCard() {
-	// courses.push(courseData)
+	courses.push(CourseCard.defaultCourse)
 	renderCards(true)
 }
 function renderCards(append = false) {
 	inactive.remove()
 	if(append) {
-		const card = new CourseCard()
+		const card = new CourseCard(courses.at(-1))
 		cardBox.append(card)
 	}
-	if(cardBox.childElementCount < 8) cardBox.append(inactive)
+	if(courses.length < 8) cardBox.append(inactive)
 	adjustGridLayout()
-	setData('courses', courses)
+	setLocalData('courses', courses)
 }
 function adjustGridLayout() {
 	const cardElements = cardBox.querySelectorAll('course-card')
@@ -56,23 +56,9 @@ function adjustGridLayout() {
 	})
 }
 function removeCard(cardElement) {
-	const courseData = courses.shift()
+	const courseData = courses.find( course => course.id == cardElement.id)
 	cardElement.remove()
 	courses.splice(courses.indexOf(courseData), 1)
 	// if (courseData.color) colors.push(courseData.color)
 	renderCards()
-}
-function setData(key, data) {
-	localStorage.setItem(key, JSON.stringify(data))
-}
-function getData(key) {
-	const stored = JSON.parse(localStorage.getItem(key))
-	return stored
-}
-function generatePastels() {
-	const colors = []
-	for (let i = 1; i<=8; i++) {
-		colors.push(`hsl(${i*45},50%,90%)`)
-	}
-	return shuffle(colors)
 }

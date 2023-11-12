@@ -15,4 +15,18 @@ function shuffle(arrayToShuffle) {
 	}
 	return array
 }
-export { generateID, randomIn, randomRGB, shuffle}
+function setLocalData(key, data) {
+	localStorage.setItem(key, JSON.stringify(data))
+}
+function getLocalData(key) {
+	const stored = JSON.parse(localStorage.getItem(key))
+	return stored
+}
+function generatePastels() {
+	const colors = []
+	for (let i = 1; i<=8; i++) {
+		colors.push(`hsl(${i*45},50%,90%)`)
+	}
+	return shuffle(colors)
+}
+export { generateID, randomIn, randomRGB, shuffle, setLocalData, getLocalData, generatePastels}

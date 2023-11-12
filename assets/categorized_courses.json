@@ -1,0 +1,3088 @@
+[
+	{
+		"Accounting": [
+			{
+				"courseCode": "ACCT 201",
+				"courseName": "ACCT 201 - Principles of Financial Accounting",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 205",
+				"courseName": "ACCT 205 - Managerial Accounting",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 301",
+				"courseName": "ACCT 301 - Intermediate Accounting I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 305",
+				"courseName": "ACCT 305 - Intermediate Accounting II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 334",
+				"courseName": "ACCT 334 - Individual & Corporate Tax",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 365",
+				"courseName": "ACCT 365 - Financial Statement Analysis",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 389",
+				"courseName": "ACCT 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 401",
+				"courseName": "ACCT 401 - Advanced Managerial Accounting",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 405",
+				"courseName": "ACCT 405 - Advanced Financial Accounting",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 413",
+				"courseName": "ACCT 413 - Accounting Capstone: Auditing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ACCT 421",
+				"courseName": "ACCT 421 - International Financial Reporting Standards",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"American Studies": [
+			{
+				"courseCode": "AMST 121",
+				"courseName": "AMST 121 - US History since 1900",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "AMST 220",
+				"courseName": "AMST 220 - Early American Political History",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "AMST 333",
+				"courseName": "AMST 333 - American Culture",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "AMST 402",
+				"courseName": "AMST 402 - American Social History in the 20th Century",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "AMST 409",
+				"courseName": "AMST 409 - American Foreign Policy since WWII",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Arabic": [
+			{
+				"courseCode": "ARAB 101",
+				"courseName": "ARAB 101 - Arabic as a Second Language I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 114",
+				"courseName": "ARAB 114 - Arabic Basic Language Skills",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 150",
+				"courseName": "ARAB 150 - Human Development in the Arab World",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 201",
+				"courseName": "ARAB 201 - Arabic as a Second Language II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 205",
+				"courseName": "ARAB 205 - Survey of Arab-Islamic Civilization",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 215",
+				"courseName": "ARAB 215 - Arabic Composition I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 220",
+				"courseName": "ARAB 220 - Readings in Arabic Heritage",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 221",
+				"courseName": "ARAB 221 - Creative Writing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 301",
+				"courseName": "ARAB 301 - Arabic as a Second Language III",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 303",
+				"courseName": "ARAB 303 - Literature of the Arabian Gulf",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 304",
+				"courseName": "ARAB 304 - Arabic Drama",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 308",
+				"courseName": "ARAB 308 - Arab Women in History",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 310",
+				"courseName": "ARAB 310 - Classical Arabic Prose",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 312",
+				"courseName": "ARAB 312 - Modern Arabic Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 313",
+				"courseName": "ARAB 313 - Arab Women and Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 314",
+				"courseName": "ARAB 314 - Classical Arabic Poetry",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 315",
+				"courseName": "ARAB 315 - Literature of Al-Andalus",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 316",
+				"courseName": "ARAB 316 - Literature in the Abbasid Era",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 318",
+				"courseName": "ARAB 318 - Modern Arabic Novel",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARAB 389",
+				"courseName": "ARAB 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Art": [
+			{
+				"courseCode": "ART 100",
+				"courseName": "ART 100 - Introduction to Creativity",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 104",
+				"courseName": "ART 104 - Art Appreciation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 120",
+				"courseName": "ART 120 - 2-D Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 121",
+				"courseName": "ART 121 - Drawing I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 122",
+				"courseName": "ART 122 - 3-D Design I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 221",
+				"courseName": "ART 221 - Drawing II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 240",
+				"courseName": "ART 240 - Water-Based Painting I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 241",
+				"courseName": "ART 241 - Oil Painting I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 340",
+				"courseName": "ART 340 - Water-Based Painting II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 341",
+				"courseName": "ART 341 - Oil Painting II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ART 389",
+				"courseName": "ART 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 101",
+				"courseName": "ARTH 101 - Art History I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 102",
+				"courseName": "ARTH 102 - Art History II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 103",
+				"courseName": "ARTH 103 - Arab and Islamic Art",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 201",
+				"courseName": "ARTH 201 - Art and Society",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 203",
+				"courseName": "ARTH 203 - Arabic and Islamic Calligraphy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 204",
+				"courseName": "ARTH 204 - Art of Africa, Oceania and the Americas",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 205",
+				"courseName": "ARTH 205 - Contemporary Art",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 208",
+				"courseName": "ARTH 208 - Asian Art",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 211",
+				"courseName": "ARTH 211 - Cities in Art",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 215",
+				"courseName": "ARTH 215 - History of Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 303",
+				"courseName": "ARTH 303 - Arab Design History",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 389",
+				"courseName": "ARTH 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Art History": [
+			{
+				"courseCode": "ARTH 101",
+				"courseName": "ARTH 101 - Art History I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 102",
+				"courseName": "ARTH 102 - Art History II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 103",
+				"courseName": "ARTH 103 - Arab and Islamic Art",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 201",
+				"courseName": "ARTH 201 - Art and Society",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 203",
+				"courseName": "ARTH 203 - Arabic and Islamic Calligraphy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 204",
+				"courseName": "ARTH 204 - Art of Africa, Oceania and the Americas",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 205",
+				"courseName": "ARTH 205 - Contemporary Art",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 208",
+				"courseName": "ARTH 208 - Asian Art",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 211",
+				"courseName": "ARTH 211 - Cities in Art",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 215",
+				"courseName": "ARTH 215 - History of Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 303",
+				"courseName": "ARTH 303 - Arab Design History",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ARTH 389",
+				"courseName": "ARTH 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Business Ethics": [
+			{
+				"courseCode": "BEAL 389",
+				"courseName": "BEAL 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BEAL 401",
+				"courseName": "BEAL 401 - Legal & Ethical Issues in Business",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BEAL 403",
+				"courseName": "BEAL 403 - Corporate Governance & Ethics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BEAL 407",
+				"courseName": "BEAL 407 - International Business Law",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Business": [
+			{
+				"courseCode": "BUS 100",
+				"courseName": "BUS 100 - Introduction to Business",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BUS 109",
+				"courseName": "BUS 109 - Quantitative Data Literarcy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BUS 209",
+				"courseName": "BUS 209 - Data Analytics I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BUS 210",
+				"courseName": "BUS 210 - Research Methods for Business",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BUS 321",
+				"courseName": "BUS 321 - International Business",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BUS 389",
+				"courseName": "BUS 389 - Special Topics in Business and Economics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BUS 489",
+				"courseName": "BUS 489 - Interdisciplinary Honors Seminar",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BUS 490",
+				"courseName": "BUS 490 - Business Administration Capstone",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Biology": [
+			{
+				"courseCode": "BIOL 101",
+				"courseName": "BIOL 101 - General Biology I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BIOL 101L",
+				"courseName": "BIOL 101L - General Biology I Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "BIOL 102",
+				"courseName": "BIOL 102 - General Biology II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BIOL 102L",
+				"courseName": "BIOL 102L - General Biology II Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "BIOL 103",
+				"courseName": "BIOL 103 - Biology in Everyday Life",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BIOL 103L",
+				"courseName": "BIOL 103L - Biology in Everyday Life Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "BIOL 105",
+				"courseName": "BIOL 105 - Environmental Science",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BIOL 200",
+				"courseName": "BIOL 200 - Structure and Function of the Human Body",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BIOL 220",
+				"courseName": "BIOL 220 - Ecology",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BIOL 317",
+				"courseName": "BIOL 317 - Introduction to Neurobiology",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "BIOL 389",
+				"courseName": "BIOL 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Chemistry": [
+			{
+				"courseCode": "CHEM 101",
+				"courseName": "CHEM 101 - General Chemistry I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CHEM 101L",
+				"courseName": "CHEM 101L - General Chemistry Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CHEM 102",
+				"courseName": "CHEM 102 - General Chemistry II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CHEM 102L",
+				"courseName": "CHEM 102L - General Chemistry II Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CHEM 103",
+				"courseName": "CHEM 103 - Chemistry in Everyday Life",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CHEM 103L",
+				"courseName": "CHEM 103L - Chemsitry in Everyday Life Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CHEM 104",
+				"courseName": "CHEM 104 - Living in a Chemical World",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CHEM 105",
+				"courseName": "CHEM 105 - The Forensic Chemistry of CSI",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CHEM 305",
+				"courseName": "CHEM 305 - Environmental Chemistry",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Communication": [
+			{
+				"courseCode": "COMM 101",
+				"courseName": "COMM 101 - Introduction to Mass Communication",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 110",
+				"courseName": "COMM 110 - Introduction to Digital Media Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 111",
+				"courseName": "COMM 111 - Images in Media",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 206",
+				"courseName": "COMM 206 - Mass Media Writing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 208",
+				"courseName": "COMM 208 - Film Production I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 211",
+				"courseName": "COMM 211 - Theories and Research Methods in Communication",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 222",
+				"courseName": "COMM 222 - Global Media and Spaces of Identity",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 230",
+				"courseName": "COMM 230 - Principles of Advertising",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 240",
+				"courseName": "COMM 240 - Principles of Public Relations",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 249",
+				"courseName": "COMM 249 - Images of Women in Media",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 265",
+				"courseName": "COMM 265 - South Asian Film: A Global Perspective",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 309",
+				"courseName": "COMM 309 - Film Production II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 310",
+				"courseName": "COMM 310 - Broadcast Journalism",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 312",
+				"courseName": "COMM 312 - News Reporting and Editing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 313",
+				"courseName": "COMM 313 - Documentary Production",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 320",
+				"courseName": "COMM 320 - Mass Media Law",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 325",
+				"courseName": "COMM 325 - Mass Communication and Society",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 338",
+				"courseName": "COMM 338 - Copywriting for Advertising",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 350",
+				"courseName": "COMM 350 - Organizational Communication and Leadership",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 360",
+				"courseName": "COMM 360 - Public Relations Writing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 366",
+				"courseName": "COMM 366 - Popular Culture in South Asia: Film",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 370",
+				"courseName": "COMM 370 - Political Communication",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 373",
+				"courseName": "COMM 373 - Communications Strategies in International Relations.",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 380",
+				"courseName": "COMM 380 - Media Translation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 389",
+				"courseName": "COMM 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 402",
+				"courseName": "COMM 402 - PR Campaigns",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 425",
+				"courseName": "COMM 425 - International Case Studies in Public Relations",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 427",
+				"courseName": "COMM 427 - Media and Arab Society",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 455",
+				"courseName": "COMM 455 - Advertising Media Planning",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 460",
+				"courseName": "COMM 460 - Advertising Campaigns",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "COMM 480",
+				"courseName": "COMM 480 - Seminar in Communication",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Computer Engineering": [
+			{
+				"courseCode": "CPEG 201L",
+				"courseName": "CPEG 201L - Matlab Programming Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CPEG 210",
+				"courseName": "CPEG 210 - Digital Logic Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 210L",
+				"courseName": "CPEG 210L - Digital Logic Design Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CPEG 220",
+				"courseName": "CPEG 220 - Computer Organization and Architecture",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 221",
+				"courseName": "CPEG 221 - Computer Systems Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 221L",
+				"courseName": "CPEG 221L - Computer Systems Engineering Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CPEG 303L",
+				"courseName": "CPEG 303L - Advanced Programming for Engineering Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CPEG 305",
+				"courseName": "CPEG 305 - Algorithms in Computer Systems Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 330",
+				"courseName": "CPEG 330 - Microprocessors & Interfacing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 330L",
+				"courseName": "CPEG 330L - Microprocessors & Interfacing Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CPEG 331L",
+				"courseName": "CPEG 331L - Data Acquisition and Automation Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CPEG 340",
+				"courseName": "CPEG 340 - Embedded System Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 340L",
+				"courseName": "CPEG 340L - Embedded System Design Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CPEG 350",
+				"courseName": "CPEG 350 - Data Communications and Computer Networks.",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 350L",
+				"courseName": "CPEG 350L - Data Communication and Computer Networks Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CPEG 389",
+				"courseName": "CPEG 389 - Special Topics in Computer Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 390",
+				"courseName": "CPEG 390 - Introduction to the Internet of Things",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 422",
+				"courseName": "CPEG 422 - Digital Signal Processing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 430",
+				"courseName": "CPEG 430 - Introduction of Soft Computing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 440",
+				"courseName": "CPEG 440 - Computer Networks",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 440L",
+				"courseName": "CPEG 440L - Computer Networks Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "CPEG 441",
+				"courseName": "CPEG 441 - Hardware/Software Co-Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 450",
+				"courseName": "CPEG 450 - Network Security",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 455",
+				"courseName": "CPEG 455 - Wireless Networks and Mobile Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 460",
+				"courseName": "CPEG 460 - Robotics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 475",
+				"courseName": "CPEG 475 - Senior Design Capstone I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CPEG 480",
+				"courseName": "CPEG 480 - Senior Design Capstone II",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Computer Science": [
+			{
+				"courseCode": "CSIS 101",
+				"courseName": "CSIS 101 - Computer Skills and Emerging Technologies",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 110",
+				"courseName": "CSIS 110 - Foundations of Information Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 120",
+				"courseName": "CSIS 120 - Computer Programming I",
+				"creditHours": 4
+			},
+			{
+				"courseCode": "CSIS 130",
+				"courseName": "CSIS 130 - Computer Programming II",
+				"creditHours": 4
+			},
+			{
+				"courseCode": "CSIS 150",
+				"courseName": "CSIS 150 - Professional and Ethical Issues in CSIS",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 210",
+				"courseName": "CSIS 210 - Data Structures and Algorithms",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 220",
+				"courseName": "CSIS 220 - Assembly Language Programming",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 230",
+				"courseName": "CSIS 230 - Programming in a Second Language",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 250",
+				"courseName": "CSIS 250 - Database Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 255",
+				"courseName": "CSIS 255 - Web Technologies",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 260",
+				"courseName": "CSIS 260 - System Analysis, Design and Acquisition",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 300",
+				"courseName": "CSIS 300 - E-Commerce",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 302",
+				"courseName": "CSIS 302 - IT Infrastructure",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 310",
+				"courseName": "CSIS 310 - Introduction to Operating Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 320",
+				"courseName": "CSIS 320 - Theory and Implementation of Programming Languages",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 322",
+				"courseName": "CSIS 322 - Computer Networks and Data Communication",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 329",
+				"courseName": "CSIS 329 - Introduction to Computer Architecture",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 330",
+				"courseName": "CSIS 330 - Software Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 370",
+				"courseName": "CSIS 370 - Computer Graphics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 389",
+				"courseName": "CSIS 389 - Special Topics in Computer Science",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 390",
+				"courseName": "CSIS 390 - Special Topics in Information Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 395",
+				"courseName": "CSIS 395 - Enterprise Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 401",
+				"courseName": "CSIS 401 - Mobile Computing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 405",
+				"courseName": "CSIS 405 - Analysis of Algorithms",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 415",
+				"courseName": "CSIS 415 - Artificial Intelligence",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 417",
+				"courseName": "CSIS 417 - Intelligent Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 425",
+				"courseName": "CSIS 425 - Advanced Software Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 440",
+				"courseName": "CSIS 440 - Software Project Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 475",
+				"courseName": "CSIS 475 - Compiler Construction",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 476",
+				"courseName": "CSIS 476 - Computer Security and Information Assurance",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 480",
+				"courseName": "CSIS 480 - Business Process Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 490",
+				"courseName": "CSIS 490 - Computer Science and Information Systems Capstone I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "CSIS 491",
+				"courseName": "CSIS 491 - Computer Science and Information Systems Capstone II",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Drama": [
+			{
+				"courseCode": "DRAM 101",
+				"courseName": "DRAM 101 - Theatre Appreciation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "DRAM 150",
+				"courseName": "DRAM 150 - Introduction to Acting",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "DRAM 160",
+				"courseName": "DRAM 160 - Theatre Practicum",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "DRAM 211",
+				"courseName": "DRAM 211 - Contemporary Theatre",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "DRAM 212",
+				"courseName": "DRAM 212 - Ancient Greek Theatre",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "DRAM 213",
+				"courseName": "DRAM 213 - Shakespeare for Beginners",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "DRAM 250",
+				"courseName": "DRAM 250 - Acting I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "DRAM 350",
+				"courseName": "DRAM 350 - Shakespeare in Performance",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "DRAM 360",
+				"courseName": "DRAM 360 - Theatre Production",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "DRAM 388",
+				"courseName": "DRAM 388 - Independent Study",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Economics": [
+			{
+				"courseCode": "ECON 101",
+				"courseName": "ECON 101 - Introduction to Contemporary Economic Issues",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 200",
+				"courseName": "ECON 200 - Principles of Microeconomics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 201",
+				"courseName": "ECON 201 - Principles of Macroeconomics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 302",
+				"courseName": "ECON 302 - Quantitative Methods for Business and Economics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 304",
+				"courseName": "ECON 304 - Economics of Labor",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 305",
+				"courseName": "ECON 305 - International Economics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 310",
+				"courseName": "ECON 310 - Intermediate Microeconomics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 312",
+				"courseName": "ECON 312 - Intermediate Macroeconomics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 315",
+				"courseName": "ECON 315 - Managerial Economics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 351",
+				"courseName": "ECON 351 - Money and Banking",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 363",
+				"courseName": "ECON 363 - Environmental & Natural Resource Economics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 389",
+				"courseName": "ECON 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 405",
+				"courseName": "ECON 405 - Comparative Economic Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 409",
+				"courseName": "ECON 409 - Economic Development",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 413",
+				"courseName": "ECON 413 - Economics Capstone: Development & Resources Economics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 429",
+				"courseName": "ECON 429 - Environmental and Energy Policy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 452",
+				"courseName": "ECON 452 - Econometrics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ECON 485",
+				"courseName": "ECON 485 - Seminar in Economics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Education": [
+			{
+				"courseCode": "EDUC 389",
+				"courseName": "EDUC 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Electrical Engineering": [
+			{
+				"courseCode": "ELEG 220",
+				"courseName": "ELEG 220 - Electric Circuits",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 220L",
+				"courseName": "ELEG 220L - Electric Circuits Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 270",
+				"courseName": "ELEG 270 - Electronics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 270L",
+				"courseName": "ELEG 270L - Electronics Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 300",
+				"courseName": "ELEG 300 - Engineering Electromagnetics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 301L",
+				"courseName": "ELEG 301L - Programmable Logic Controllers Lab",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 305",
+				"courseName": "ELEG 305 - Introduction to Biomedical Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 310",
+				"courseName": "ELEG 310 - Electric Machines and Power Fund",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 310L",
+				"courseName": "ELEG 310L - Electric Machines Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 311",
+				"courseName": "ELEG 311 - Power Distribution and Utilization",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 315",
+				"courseName": "ELEG 315 - Electrical Systems Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 315L",
+				"courseName": "ELEG 315L - Electrical Systems Engineering Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 320",
+				"courseName": "ELEG 320 - Signals & Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 320L",
+				"courseName": "ELEG 320L - Signals & Systems Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 321",
+				"courseName": "ELEG 321 - Analog and Digital Filters",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 323",
+				"courseName": "ELEG 323 - Measurement and Instrumentation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 323L",
+				"courseName": "ELEG 323L - Measurements and Instrumentation Lab",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 325",
+				"courseName": "ELEG 325 - Communication Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 330",
+				"courseName": "ELEG 330 - Power System Analysis",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 330L",
+				"courseName": "ELEG 330L - Power Systems Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 331",
+				"courseName": "ELEG 331 - Power System Protection",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 331L",
+				"courseName": "ELEG 331L - Power System Protection Lab",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 340",
+				"courseName": "ELEG 340 - Fundamentals of High Voltage Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 389",
+				"courseName": "ELEG 389 - Special Topics in Electrical Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 411",
+				"courseName": "ELEG 411 - Electric Drives",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 412",
+				"courseName": "ELEG 412 - Renewable Energy Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 421",
+				"courseName": "ELEG 421 - Control Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 421L",
+				"courseName": "ELEG 421L - Control Systems Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 422",
+				"courseName": "ELEG 422 - Digital Control",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 450",
+				"courseName": "ELEG 450 - Modern Antennas in Wireless Telecommunications",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 471",
+				"courseName": "ELEG 471 - Power Electronics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 471L",
+				"courseName": "ELEG 471L - Power Electronics Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ELEG 472",
+				"courseName": "ELEG 472 - CMOS Digital Circuit Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 475",
+				"courseName": "ELEG 475 - Senior Capstone Design I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ELEG 480",
+				"courseName": "ELEG 480 - Senior Capstone Design II",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"English": [
+			{
+				"courseCode": "ENGL 100",
+				"courseName": "ENGL 100 - Foundations of Academic Reading and Writing",
+				"creditHours": 4
+			},
+			{
+				"courseCode": "ENGL 101",
+				"courseName": "ENGL 101 - Approaches to Critical Reading and Writing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 102",
+				"courseName": "ENGL 102 - Writing and Information Literacy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 108",
+				"courseName": "ENGL 108 - Public Speaking",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 200",
+				"courseName": "ENGL 200 - Introduction to Literary Studies",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 207",
+				"courseName": "ENGL 207 - Introduction to Rhetorical Studies",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 220",
+				"courseName": "ENGL 220 - Survey of World Literatures I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 221",
+				"courseName": "ENGL 221 - Survey of World Literatures II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 300",
+				"courseName": "ENGL 300 - History of the English Language",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 301",
+				"courseName": "ENGL 301 - Literature and Film",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 302",
+				"courseName": "ENGL 302 - Medieval Literature (500-1500)",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 303",
+				"courseName": "ENGL 303 - English Poetry and Prose: 1500-1660",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 304",
+				"courseName": "ENGL 304 - English Poetry and Prose: 1660-1800",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 305",
+				"courseName": "ENGL 305 - Professional Writing and Communication",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 307",
+				"courseName": "ENGL 307 - Shakespeare",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 308",
+				"courseName": "ENGL 308 - Early American Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 309",
+				"courseName": "ENGL 309 - 19th Century British Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 310",
+				"courseName": "ENGL 310 - 19th Century American Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 311",
+				"courseName": "ENGL 311 - English Novel",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 312",
+				"courseName": "ENGL 312 - American Novel",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 314",
+				"courseName": "ENGL 314 - Modernism/ Postmodernism",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 315",
+				"courseName": "ENGL 315 - 20th Century American Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 319",
+				"courseName": "ENGL 319 - Women and Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 343",
+				"courseName": "ENGL 343 - Poetry and Poetics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 345",
+				"courseName": "ENGL 345 - Creative Writing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 349",
+				"courseName": "ENGL 349 - Literature in Translation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 355",
+				"courseName": "ENGL 355 - Contemporary World Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 375",
+				"courseName": "ENGL 375 - Rhetorics of Cultural Dissonance",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 376",
+				"courseName": "ENGL 376 - Language in the Arab World",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 378",
+				"courseName": "ENGL 378 - English and Globalization",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 389",
+				"courseName": "ENGL 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 400",
+				"courseName": "ENGL 400 - Seminar on British Authors",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 401",
+				"courseName": "ENGL 401 - Seminar on American Authors",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 402",
+				"courseName": "ENGL 402 - Seminar on History of Theatre and Drama",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 405",
+				"courseName": "ENGL 405 - Seminar on Postcolonial Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 406",
+				"courseName": "ENGL 406 - Seminar on Ethnic American Literature",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 415",
+				"courseName": "ENGL 415 - Literary Theory and Criticism",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 450",
+				"courseName": "ENGL 450 - Senior Seminar",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGL 485",
+				"courseName": "ENGL 485 - Senior Thesis",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Entrepreneurship": [
+			{
+				"courseCode": "ENTR 201",
+				"courseName": "ENTR 201 - Principles of Entrepreneurship",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENTR 301",
+				"courseName": "ENTR 301 - Intermediate Entrepreneurship",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENTR 313",
+				"courseName": "ENTR 313 - Managing Entrepreneurial Ventures",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENTR 389",
+				"courseName": "ENTR 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Engineering": [
+			{
+				"courseCode": "ENGR 200",
+				"courseName": "ENGR 200 - Engineering Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGR 210",
+				"courseName": "ENGR 210 - Engineering Entrepreneurship I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGR 300",
+				"courseName": "ENGR 300 - Engineering Ethics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGR 310",
+				"courseName": "ENGR 310 - Engineering Entrepreneurship II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGR 330",
+				"courseName": "ENGR 330 - Engineering Economics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGR 340",
+				"courseName": "ENGR 340 - Engineering Project Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENGR 340L",
+				"courseName": "ENGR 340L - Eng. Pro. Management Lab",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "ENGR 389",
+				"courseName": "ENGR 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Environmental Studies": [
+			{
+				"courseCode": "ENVS 101",
+				"courseName": "ENVS 101 - Introduction to Environmental Studies",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENVS 215",
+				"courseName": "ENVS 215 - Environmental Data Analysis",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENVS 220",
+				"courseName": "ENVS 220 - Energy and the Environment",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENVS 230",
+				"courseName": "ENVS 230 - Environmental Geology",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENVS 305",
+				"courseName": "ENVS 305 - Environmental Health",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENVS 310",
+				"courseName": "ENVS 310 - Environmental Ethics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENVS 320",
+				"courseName": "ENVS 320 - Global Environmental Policy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENVS 325",
+				"courseName": "ENVS 325 - Health, Environment & Armed Conflict",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENVS 340",
+				"courseName": "ENVS 340 - The Gendered Environment",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ENVS 389",
+				"courseName": "ENVS 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Finance": [
+			{
+				"courseCode": "FINC 232",
+				"courseName": "FINC 232 - Financial Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 332",
+				"courseName": "FINC 332 - Financial Management I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 341",
+				"courseName": "FINC 341 - Corporate Finance",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 343",
+				"courseName": "FINC 343 - Financial Services Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 345",
+				"courseName": "FINC 345 - Investments and Security Analysis",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 350",
+				"courseName": "FINC 350 - Islamic Banking and Finance",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 355",
+				"courseName": "FINC 355 - Financial Institutions of the Gulf",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 365",
+				"courseName": "FINC 365 - International Finance",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 389",
+				"courseName": "FINC 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 413",
+				"courseName": "FINC 413 - Finance Capstone: International Finance, Financial Markets and Institutions",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FINC 445",
+				"courseName": "FINC 445 - Portfolio Management",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"French": [
+			{
+				"courseCode": "FRNC 101",
+				"courseName": "FRNC 101 - Introduction to French I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FRNC 102",
+				"courseName": "FRNC 102 - Introduction to French II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FRNC 201",
+				"courseName": "FRNC 201 - Intermediate French",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FRNC 202",
+				"courseName": "FRNC 202 - Intermediate French II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FRNC 333",
+				"courseName": "FRNC 333 - Language and Civilization",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "FRNC 389",
+				"courseName": "FRNC 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Graphic Design": [
+			{
+				"courseCode": "GDES 110",
+				"courseName": "GDES 110 - Digital Foundations",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 150",
+				"courseName": "GDES 150 - Introduction to Time Based Media",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 204",
+				"courseName": "GDES 204 - Digital Photography I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 208",
+				"courseName": "GDES 208 - Film Production I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 220",
+				"courseName": "GDES 220 - Graphic Design I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 221",
+				"courseName": "GDES 221 - Typography I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 242",
+				"courseName": "GDES 242 - Digital Imaging I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 260",
+				"courseName": "GDES 260 - Illustration I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 304",
+				"courseName": "GDES 304 - Digital Photography II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 320",
+				"courseName": "GDES 320 - Graphic Design II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 321",
+				"courseName": "GDES 321 - Typography II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 330",
+				"courseName": "GDES 330 - Print Production",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 337",
+				"courseName": "GDES 337 - Environmental Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 342",
+				"courseName": "GDES 342 - Digital Imaging II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 351",
+				"courseName": "GDES 351 - Web Design",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 360",
+				"courseName": "GDES 360 - Illustration II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 389",
+				"courseName": "GDES 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 404",
+				"courseName": "GDES 404 - Professional Practice",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 420",
+				"courseName": "GDES 420 - Graphic Design III",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 421",
+				"courseName": "GDES 421 - Typography III",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 452",
+				"courseName": "GDES 452 - 3D Modeling and Animation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 453",
+				"courseName": "GDES 453 - Motion Graphics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "GDES 490",
+				"courseName": "GDES 490 - Capstone",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"History": [
+			{
+				"courseCode": "HIST 105",
+				"courseName": "HIST 105 - World History Since 1900",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 110",
+				"courseName": "HIST 110 - Twentieth Century Middle East",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 201",
+				"courseName": "HIST 201 - History and Politics of Kuwait",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 202",
+				"courseName": "HIST 202 - History and Politics of the Iranian World",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 204",
+				"courseName": "HIST 204 - European History until the French Revolution",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 205",
+				"courseName": "HIST 205 - History of Modern Europe",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 221",
+				"courseName": "HIST 221 - Survey of Gulf History",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 289",
+				"courseName": "HIST 289 - Topics in World History",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 305",
+				"courseName": "HIST 305 - History of the Islamic World 622-1800",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 307",
+				"courseName": "HIST 307 - Arab History in the late Ottoman Period: 1800-1922",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 309",
+				"courseName": "HIST 309 - Twentieth Century Arab History",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 311",
+				"courseName": "HIST 311 - Ottoman History (1400-1923)",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 317",
+				"courseName": "HIST 317 - Topics in English / British History",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 319",
+				"courseName": "HIST 319 - The British Empire",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 384",
+				"courseName": "HIST 384 - History of Social Trends in Kuwait",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 389",
+				"courseName": "HIST 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 401",
+				"courseName": "HIST 401 - Economic History: Twentieth Century",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HIST 430",
+				"courseName": "HIST 430 - Oral History",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Human Resources": [
+			{
+				"courseCode": "HR 205",
+				"courseName": "HR 205 - Human Resource Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HR 305",
+				"courseName": "HR 305 - Human Resource Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HR 310",
+				"courseName": "HR 310 - Recruiting and Staffing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HR 311",
+				"courseName": "HR 311 - Total Rewards: Compensation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HR 325",
+				"courseName": "HR 325 - Work and Well-being",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HR 344",
+				"courseName": "HR 344 - Managing Conflict",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HR 350",
+				"courseName": "HR 350 - International HR Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HR 389",
+				"courseName": "HR 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "HR 413",
+				"courseName": "HR 413 - Human Resource Management Capstone",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Nutrition and Health": [
+			{
+				"courseCode": "HFIT 103",
+				"courseName": "HFIT 103 - Nutrition and Health",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"International Relations": [
+			{
+				"courseCode": "IR 101",
+				"courseName": "IR 101 - Introduction to International Relations",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 202",
+				"courseName": "IR 202 - Trends in International Relations",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 206",
+				"courseName": "IR 206 - International Political Economy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 210",
+				"courseName": "IR 210 - Methods of Research in International Relations",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 306",
+				"courseName": "IR 306 - Global Political Economy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 307",
+				"courseName": "IR 307 - IR of Arab States",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 309",
+				"courseName": "IR 309 - Dynamics of Globalization",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 339",
+				"courseName": "IR 339 - International Organizations",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 341",
+				"courseName": "IR 341 - Public International Law",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 342",
+				"courseName": "IR 342 - International Human Rights",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 343",
+				"courseName": "IR 343 - Terrorism & International Law",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 345",
+				"courseName": "IR 345 - Conflict Resolution",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 373",
+				"courseName": "IR 373 - Communications Strategies in International Relations.",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 385",
+				"courseName": "IR 385 - Kuwait Foreign Policy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 386",
+				"courseName": "IR 386 - Perspectives on US Foreign Policy in the Middle East (Soliya Connect Program)",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 389",
+				"courseName": "IR 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "IR 480",
+				"courseName": "IR 480 - Capstone",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Italian": [
+			{
+				"courseCode": "ITAL 101",
+				"courseName": "ITAL 101 - Introduction to Italian I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ITAL 102",
+				"courseName": "ITAL 102 - Introduction to Italian II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "ITAL 201",
+				"courseName": "ITAL 201 - Intermediate Italian",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Mathematics": [
+			{
+				"courseCode": "MATH 095",
+				"courseName": "MATH 095 - Preparatory Mathematics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 100",
+				"courseName": "MATH 100 - College Algebra",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 101",
+				"courseName": "MATH 101 - Finite Mathematics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 102",
+				"courseName": "MATH 102 - Introduction To Modern Mathematics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 103",
+				"courseName": "MATH 103 - Mathematics for Business",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 105",
+				"courseName": "MATH 105 - Nature of Mathematics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 110",
+				"courseName": "MATH 110 - Pre-Calculus",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 201",
+				"courseName": "MATH 201 - Calculus I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 203",
+				"courseName": "MATH 203 - Calculus II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 205",
+				"courseName": "MATH 205 - Linear Algebra",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 206",
+				"courseName": "MATH 206 - Calculus III",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 207",
+				"courseName": "MATH 207 - Advanced Engineering Mathematics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 210",
+				"courseName": "MATH 210 - Differential Equations",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 213",
+				"courseName": "MATH 213 - Discrete Mathematics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 325",
+				"courseName": "MATH 325 - Numerical Computing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MATH 389",
+				"courseName": "MATH 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Music": [
+			{
+				"courseCode": "MUSC 101",
+				"courseName": "MUSC 101 - Music Appreciation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 105",
+				"courseName": "MUSC 105 - Introduction to World Music",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 160",
+				"courseName": "MUSC 160 - Ensemble",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 165",
+				"courseName": "MUSC 165 - Percussion Ensemble",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 215",
+				"courseName": "MUSC 215 - Guitar Class",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 216",
+				"courseName": "MUSC 216 - Piano Class",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 217",
+				"courseName": "MUSC 217 - Voice Class",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 220",
+				"courseName": "MUSC 220 - Music Theory I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 230",
+				"courseName": "MUSC 230 - Music Theory II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 260",
+				"courseName": "MUSC 260 - Choir Class",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 365",
+				"courseName": "MUSC 365 - Percussion Ensemble II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 370",
+				"courseName": "MUSC 370 - Music of the Arabian Peninsula",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MUSC 389",
+				"courseName": "MUSC 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Management": [
+			{
+				"courseCode": "MGMT 201",
+				"courseName": "MGMT 201 - Principles of Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 300",
+				"courseName": "MGMT 300 - Quality Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 301",
+				"courseName": "MGMT 301 - Change Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 303",
+				"courseName": "MGMT 303 - Management and Leadership Development",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 304",
+				"courseName": "MGMT 304 - Business Relationship Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 315",
+				"courseName": "MGMT 315 - Decision Making in Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 333",
+				"courseName": "MGMT 333 - Organizational Behavior",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 343",
+				"courseName": "MGMT 343 - Quantitative Research Methods for Business",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 346",
+				"courseName": "MGMT 346 - Production & Operations Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 350",
+				"courseName": "MGMT 350 - Organizational Communication and Leadership",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 389",
+				"courseName": "MGMT 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 413",
+				"courseName": "MGMT 413 - Capstone: Strategic Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MGMT 485",
+				"courseName": "MGMT 485 - Senior Seminar in Management",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Marketing": [
+			{
+				"courseCode": "MRKT 200",
+				"courseName": "MRKT 200 - Principles of Marketing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 309",
+				"courseName": "MRKT 309 - Digital Marketing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 329",
+				"courseName": "MRKT 329 - International Marketing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 330",
+				"courseName": "MRKT 330 - Services Marketing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 340",
+				"courseName": "MRKT 340 - Social Media Marketing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 349",
+				"courseName": "MRKT 349 - Buyer Behavior",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 355",
+				"courseName": "MRKT 355 - Promotion and Advertising",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 389",
+				"courseName": "MRKT 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 401",
+				"courseName": "MRKT 401 - Marketing Research",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 413",
+				"courseName": "MRKT 413 - Marketing Capstone: Marketing Strategy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "MRKT 415",
+				"courseName": "MRKT 415 - Supply Chain Management",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Natural Sciences": [
+			{
+				"courseCode": "NSCI 100",
+				"courseName": "NSCI 100 - Natural Sciences Lecture",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "NSCI 100L",
+				"courseName": "NSCI 100L - Natural Sciences Lab",
+				"creditHours": 1
+			}
+		]
+	},
+	{
+		"Philosophy": [
+			{
+				"courseCode": "PHIL 100",
+				"courseName": "PHIL 100 - Critical Reasoning",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 101",
+				"courseName": "PHIL 101 - Introduction to Philosophy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 103",
+				"courseName": "PHIL 103 - Introduction to Moral Philosophy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 201",
+				"courseName": "PHIL 201 - Medieval Arabic Philosophy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 203",
+				"courseName": "PHIL 203 - Professional Ethics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 280",
+				"courseName": "PHIL 280 - International Ethics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 310",
+				"courseName": "PHIL 310 - Environmental Ethics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 311",
+				"courseName": "PHIL 311 - Modern Western Philosophy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 322",
+				"courseName": "PHIL 322 - Western Political Philosophy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 350",
+				"courseName": "PHIL 350 - Metaphysics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 389",
+				"courseName": "PHIL 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHIL 403",
+				"courseName": "PHIL 403 - Advanced Business Ethics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Physics": [
+			{
+				"courseCode": "PHYS 101",
+				"courseName": "PHYS 101 - Introduction to Physics I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 101L",
+				"courseName": "PHYS 101L - Introduction to Physics I Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "PHYS 102",
+				"courseName": "PHYS 102 - Introduction to Physics II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 102L",
+				"courseName": "PHYS 102L - Introduction to Physics II Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "PHYS 105",
+				"courseName": "PHYS 105 - Environmental Physics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 107",
+				"courseName": "PHYS 107 - Life in the Universe",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 110",
+				"courseName": "PHYS 110 - Introduction to Astronomy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 115",
+				"courseName": "PHYS 115 - General Physics I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 115L",
+				"courseName": "PHYS 115L - General Physics I Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "PHYS 116",
+				"courseName": "PHYS 116 - General Physics II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 116L",
+				"courseName": "PHYS 116L - General Physics II Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "PHYS 212",
+				"courseName": "PHYS 212 - Classical Mechanics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 216",
+				"courseName": "PHYS 216 - Electricity and Magnetism",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 312",
+				"courseName": "PHYS 312 - Modern Physics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PHYS 389",
+				"courseName": "PHYS 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Political Science": [
+			{
+				"courseCode": "PLSC 101",
+				"courseName": "PLSC 101 - Introduction to Political Science",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 203",
+				"courseName": "PLSC 203 - Comparative Politics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 210",
+				"courseName": "PLSC 210 - Methods of Research in Political Science",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 302",
+				"courseName": "PLSC 302 - Public Policy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 303",
+				"courseName": "PLSC 303 - Politics of Postindustrial Societies",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 304",
+				"courseName": "PLSC 304 - Arab Politics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 315",
+				"courseName": "PLSC 315 - American Government",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 317",
+				"courseName": "PLSC 317 - Government and Politics of Kuwait",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 321",
+				"courseName": "PLSC 321 - Islamic Political Philosophy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 322",
+				"courseName": "PLSC 322 - Western Political Theory",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 327",
+				"courseName": "PLSC 327 - Comparative Ethnicity, Identity, and Ethnic Conflict",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 389",
+				"courseName": "PLSC 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PLSC 405",
+				"courseName": "PLSC 405 - Comparative Political and Economic Systems",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Psychology": [
+			{
+				"courseCode": "PSYC 101",
+				"courseName": "PSYC 101 - Introduction to Psychology",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 200",
+				"courseName": "PSYC 200 - Research Design and Methods",
+				"creditHours": 4
+			},
+			{
+				"courseCode": "PSYC 202",
+				"courseName": "PSYC 202 - Lifespan Development",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 203",
+				"courseName": "PSYC 203 - Social Psychology",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 204",
+				"courseName": "PSYC 204 - Abnormal Psychology",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 235",
+				"courseName": "PSYC 235 - Child Development",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 240",
+				"courseName": "PSYC 240 - Cognitive Psychology",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 332",
+				"courseName": "PSYC 332 - Personality Theories",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 335",
+				"courseName": "PSYC 335 - Psychology of Addictions",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 342",
+				"courseName": "PSYC 342 - Sensation and Perception",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 365",
+				"courseName": "PSYC 365 - Marriage and Family Therapy",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 389",
+				"courseName": "PSYC 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "PSYC 475",
+				"courseName": "PSYC 475 - Current Issues",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Religion": [
+			{
+				"courseCode": "RELG 101",
+				"courseName": "RELG 101 - Introduction to Islamic Studies",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "RELG 315",
+				"courseName": "RELG 315 - Religions of the World",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "RELG 389",
+				"courseName": "RELG 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Social Studies": [
+			{
+				"courseCode": "SBSA 101",
+				"courseName": "SBSA 101 - Introduction to Social and Behavioral Sciences, Concentration in Anthropology",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 200",
+				"courseName": "SBSA 200 - Ethnographic and Research Methods",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 205",
+				"courseName": "SBSA 205 - Fundamentals of Arab Society",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 210",
+				"courseName": "SBSA 210 - Arab Society and Culture",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 222",
+				"courseName": "SBSA 222 - Global Media and Spaces of Identity",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 224",
+				"courseName": "SBSA 224 - Shopping and Consumerism",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 235",
+				"courseName": "SBSA 235 - Identity, Difference and Deviance",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 239",
+				"courseName": "SBSA 239 - Nations and Migration",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 249",
+				"courseName": "SBSA 249 - Images of Women in Media",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 255",
+				"courseName": "SBSA 255 - Health, Medicine and Curing",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 260",
+				"courseName": "SBSA 260 - Ethnographic Film",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 270",
+				"courseName": "SBSA 270 - The Indigenous Americas",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 280",
+				"courseName": "SBSA 280 - Kinship & Families-Global Era",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 341",
+				"courseName": "SBSA 341 - Women in Cross-Cultural Perspective",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 344",
+				"courseName": "SBSA 344 - Tourism and Cultural Change",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 345",
+				"courseName": "SBSA 345 - Globalization: Opportunities and Challenges",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 348",
+				"courseName": "SBSA 348 - Anthropology of Human Rights",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 360",
+				"courseName": "SBSA 360 - Genocide and Refugees",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 370",
+				"courseName": "SBSA 370 - Music of the Arabian Peninsula",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 372",
+				"courseName": "SBSA 372 - Anthropology of Business",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 389",
+				"courseName": "SBSA 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SBSA 485",
+				"courseName": "SBSA 485 - Seminar in Social and Behavioral Sciences, Concentration in Anthropology",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Spanish": [
+			{
+				"courseCode": "SPAN 101",
+				"courseName": "SPAN 101 - Introduction to Spanish I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SPAN 102",
+				"courseName": "SPAN 102 - Introduction to Spanish II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SPAN 201",
+				"courseName": "SPAN 201 - Intermediate Spanish",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SPAN 202",
+				"courseName": "SPAN 202 - Intermediate Spanish II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SPAN 333",
+				"courseName": "SPAN 333 - Language and Culture",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SPAN 389",
+				"courseName": "SPAN 389 - Special Topics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "SPAN 399",
+				"courseName": "SPAN 399 - Spanish Study Abroad",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Statistics": [
+			{
+				"courseCode": "STAT 201",
+				"courseName": "STAT 201 - Statistics",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STAT 202",
+				"courseName": "STAT 202 - Regression for Business",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STAT 203",
+				"courseName": "STAT 203 - Probability and Statistics",
+				"creditHours": 4
+			},
+			{
+				"courseCode": "STAT 214",
+				"courseName": "STAT 214 - Statistics for Engineers",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Systems Engineering": [
+			{
+				"courseCode": "STEG 210",
+				"courseName": "STEG 210 - Dynamic Systems",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 210L",
+				"courseName": "STEG 210L - Dynamic Systems Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "STEG 220",
+				"courseName": "STEG 220 - Engineering Statistical Analysis",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 220L",
+				"courseName": "STEG 220L - Engineering Statistical Analysis Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "STEG 321",
+				"courseName": "STEG 321 - Systems Simulation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 321L",
+				"courseName": "STEG 321L - Systems Simulation Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "STEG 330",
+				"courseName": "STEG 330 - Operations Research I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 331",
+				"courseName": "STEG 331 - Operations Research II",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 340",
+				"courseName": "STEG 340 - Engineering Project Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 340L",
+				"courseName": "STEG 340L - Engineering Project Management Laboratory",
+				"creditHours": 1
+			},
+			{
+				"courseCode": "STEG 341",
+				"courseName": "STEG 341 - Production and Operations Management",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 345",
+				"courseName": "STEG 345 - Quality Control",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 350",
+				"courseName": "STEG 350 - Human Factors Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 369",
+				"courseName": "STEG 369 - Short Course",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 389",
+				"courseName": "STEG 389 - Special Topics in Systems Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 422",
+				"courseName": "STEG 422 - Advanced Simulation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 431",
+				"courseName": "STEG 431 - Stochastic Operations Research",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 442",
+				"courseName": "STEG 442 - Supply Chain Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 446",
+				"courseName": "STEG 446 - Engineering Reliability",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 451",
+				"courseName": "STEG 451 - Health and Safety Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 452",
+				"courseName": "STEG 452 - Productivity Improvement",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 465",
+				"courseName": "STEG 465 - Petroleum Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 470",
+				"courseName": "STEG 470 - Internship in Systems Engineering",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 475",
+				"courseName": "STEG 475 - Senior Design Capstone I",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "STEG 480",
+				"courseName": "STEG 480 - Senior Design Capstone II",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"Translation": [
+			{
+				"courseCode": "TRAN 101",
+				"courseName": "TRAN 101 - Introduction to Translation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "TRAN 201",
+				"courseName": "TRAN 201 - Theoretical and Practical Issues in Translation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "TRAN 380",
+				"courseName": "TRAN 380 - Media Translation",
+				"creditHours": 3
+			},
+			{
+				"courseCode": "TRAN 389",
+				"courseName": "TRAN 389 - Special Topics",
+				"creditHours": 3
+			}
+		]
+	},
+	{
+		"University": [
+			{
+				"courseCode": "UNIV 100",
+				"courseName": "UNIV 100 - Essentials of Learning",
+				"creditHours": 2
+			},
+			{
+				"courseCode": "UNIV 110",
+				"courseName": "UNIV 110 - University, Community and Citizenship",
+				"creditHours": 3
+			}
+		]
+	}
+]
