@@ -5,45 +5,67 @@
 		pdf reader
 		animations
 */
-import { setLocalData, getLocalData, generatePastels } from '/scripts/utils.js'
+import { generateID, setLocalData, getLocalData, generatePastels } from '/scripts/utils.js'
+import CourseCard from '/scripts/CourseCard.js'
 
-const colors = getLocalData('colors') || generatePastels()
-const courses = getLocalData('courses') || []
+let colors = getLocalData('colors') || generatePastels()
+let courses = getLocalData('courses') || []
 const cardBox = document.querySelector('.card-container')
 const inactive = new CourseCard(CourseCard.defaultCourse, false)
 
 cardBox.addEventListener('click', e => {
 	if(e.target.classList.contains('remove')) {
 		const cardElement = e.target.closest('course-card')
-		removeCard(cardElement)
+		removeCourse(cardElement)
 	}
-	if(e.target.classList.contains('inactive')) addCard()
+	if(e.target.classList.contains('inactive')) {
+		const courseData = readForm()
+		addCourse(courseData)
+	}
 })
 document.addEventListener('login', init)
 // init courses:
-const auth = JSON.parse(localStorage.getItem('auth'))
+const auth = getLocalData('auth')
 if (auth) init()
 
 function init() {
 	courses.forEach(courseData => {
-		const card = new CourseCard(courseData)
-		cardBox.append(card)
+		cardBox.append(new CourseCard(courseData))
 	})
-	renderCards()
+	renderCourseCards(false)
 }
-function addCard() {
-	courses.push(CourseCard.defaultCourse)
-	renderCards(true)
-}
-function renderCards(append = false) {
-	inactive.remove()
-	if(append) {
-		const card = new CourseCard(courses.at(-1))
-		cardBox.append(card)
+function readForm() {
+	const id = generateID()
+	const courseData = {
+		code: 'TEST 111',
+		name: `Course #${id.slice(0,4)}`,
+		credits: 3,
+		assignments: [CourseCard.defaultAssignment],
+		color: colors.pop(),
+		id: id
 	}
+	return courseData
+}
+function addCourse(courseData = CourseCard.defaultCourse) {
+	courses.push(courseData)
+	cardBox.append(new CourseCard(courseData))
+	renderCourseCards()
+}
+function renderCourseCards(save = true) {
 	if(courses.length < 8) cardBox.append(inactive)
+	else inactive.remove()
+	if(save) {
+		setLocalData('courses', courses)
+		setLocalData('colors', colors)
+	}
 	adjustGridLayout()
-	setLocalData('courses', courses)
+}
+function removeCourse(cardElement) {
+	const courseData = courses.find( course => course.id == cardElement.id)
+	cardElement.remove()
+	courses = courses.filter(course => course != courseData)
+	colors.push(courseData.color)
+	renderCourseCards()
 }
 function adjustGridLayout() {
 	const cardElements = cardBox.querySelectorAll('course-card')
@@ -54,11 +76,4 @@ function adjustGridLayout() {
 		card.style.gridRow = row
 		card.style.gridColumn = `${column} / ${column + 2}`
 	})
-}
-function removeCard(cardElement) {
-	const courseData = courses.find( course => course.id == cardElement.id)
-	cardElement.remove()
-	courses.splice(courses.indexOf(courseData), 1)
-	// if (courseData.color) colors.push(courseData.color)
-	renderCards()
 }

@@ -4,9 +4,6 @@ function generateID() {
 function randomIn(min,max){
 	return Math.floor(Math.random() * (max - min + 1) + min)
 }
-function randomRGB(){
-	return `rgb(${randomIn(0,255)},${randomIn(0,255)},${randomIn(0,255)})`
-}
 function shuffle(arrayToShuffle) {
 	const array = structuredClone(arrayToShuffle)
 	for (let i = array.length - 1; i > 0; i--) {
@@ -29,4 +26,4 @@ function generatePastels() {
 	}
 	return shuffle(colors)
 }
-export { generateID, randomIn, randomRGB, shuffle, setLocalData, getLocalData, generatePastels}
+export { generateID, randomIn, shuffle, setLocalData, getLocalData, generatePastels}

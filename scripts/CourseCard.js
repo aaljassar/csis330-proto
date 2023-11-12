@@ -1,14 +1,19 @@
 class CourseCard extends HTMLElement {
 	static defaultAssignment = {name: 'default', percent: '100', due: new Date(2000,0,1), weight: 10}
-	static defaultCourse = {code: 'DFLT 000', name: 'default', credits: 10, assignments: [this.defaultAssignment], color: '#ccc'}
+	static defaultCourse = {code: 'DFLT 000', name: 'default', credits: 10, assignments: [this.defaultAssignment], color: '#ccc', id: 'defaultID'}
 	courseData
 	$ = (selector) => this.querySelector(selector)
 	constructor(courseData = CourseCard.defaultCourse, active = true) {
 		super()
 		this.courseData = courseData
 		this.className = `raise ${active ? '' : 'inactive'}`
-		const {code, name, color} = courseData
-		this.id = code
+		this.id = courseData.id
+	}
+	connectedCallback() {
+		this.#renderCard()
+	}
+	#renderCard() {
+		const {code, name, color} = this.courseData
 		this.innerHTML = /* html */ `
 		<div class="header" style="background: ${color};">
 			<h5 class="code">${code}</h5>
@@ -18,8 +23,6 @@ class CourseCard extends HTMLElement {
 		<ul class="assignment-list">
 		</ul>
 		`
-	}
-	connectedCallback() {
 	}
 	#renderAssignments() {
 		const {assignments} = this.courseData
@@ -43,3 +46,4 @@ class CourseCard extends HTMLElement {
 	}
 }
 customElements.define('course-card', CourseCard)
+export default CourseCard
