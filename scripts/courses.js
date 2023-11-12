@@ -1,100 +1,73 @@
 /* todo:
+		add course input
 		assignments
 		date picker
 		pdf reader
 		animations
 */
-import { generateID, shuffle } from '/scripts/utils.js'
+import { shuffle } from '/scripts/utils.js'
 
-const colors = getData('colors')
-const cards = getData('cards')
+const colors = getData('colors') || generatePastels()
+const courses = getData('courses') || []
 const cardBox = document.querySelector('.card-container')
-const blank = createCard({ name: '+', color: '#fff', isBlank: true })
+const inactive = new CourseCard(CourseCard.defaultCourse, false)
 
 cardBox.addEventListener('click', e => {
 	if(e.target.classList.contains('remove')) {
-		const cardElement = e.target.closest('.card')
+		const cardElement = e.target.closest('course-card')
 		removeCard(cardElement)
 	}
-	if(e.target.classList.contains('blank')) addCard()
+	if(e.target.classList.contains('inactive')) addCard()
 })
 document.addEventListener('login', init)
-// init cards:
+// init courses:
 const auth = JSON.parse(localStorage.getItem('auth'))
 if (auth) init()
-else renderBlanks()
 
 function init() {
-	cards.forEach(cardData => {
-		const card = createCard(cardData)
+	courses.forEach(courseData => {
+		const card = new CourseCard()
 		cardBox.append(card)
 	})
 	renderCards()
 }
 function addCard() {
-	const classID = generateID()
-	const cardData = {
-		name: `Class #${classID.slice(0,4)}`,
-		color: colors.pop(),
-		isBlank: false,
-		id: classID,
-	}
-	cards.push(cardData)
+	// courses.push(courseData)
 	renderCards(true)
 }
 function renderCards(append = false) {
+	inactive.remove()
 	if(append) {
-		const card = createCard(cards.at(-1))
+		const card = new CourseCard()
 		cardBox.append(card)
 	}
-	if(cards.length < 8) cardBox.append(blank)
-	else blank.remove()
+	if(cardBox.childElementCount < 8) cardBox.append(inactive)
 	adjustGridLayout()
-	storeData()
+	setData('courses', courses)
 }
 function adjustGridLayout() {
-	const cardElements = cardBox.querySelectorAll('.card')
+	const cardElements = cardBox.querySelectorAll('course-card')
 	cardElements.forEach((card,index) => {
 		index += 1
 		const row = index <= 4 ? 1 : 2
 		const column = row == 1 ? index : index - 4
 		card.style.gridRow = row
-		card.style.gridColumn = `${column} / span 2`
+		card.style.gridColumn = `${column} / ${column + 2}`
 	})
 }
-function createCard(cardData) {
-	const { name, color, isBlank, id = 'blank'} = cardData
-	const cardTemplate = document.createElement('div')
-	cardTemplate.innerHTML = /* html */ `
-		<div id="${id}" class="card raise${isBlank ? ' blank' : ''}">
-			<div class="card__header" style="background: ${color}">
-				<h3>${name}</h3>
-				${isBlank ? '' : `<button class="remove">x</button>`}
-			</div>
-		</div>
-	`
-	const inner = cardTemplate.children[0]
-	return inner
-}
 function removeCard(cardElement) {
-	const cardData = cards.find( card => card.id == cardElement.id)
+	const courseData = courses.shift()
 	cardElement.remove()
-	cards.splice(cards.indexOf(cardData), 1)
-	if (cardData.color) colors.push(cardData.color)
+	courses.splice(courses.indexOf(courseData), 1)
+	// if (courseData.color) colors.push(courseData.color)
 	renderCards()
 }
-function storeData() {
-	localStorage.setItem('cards', JSON.stringify(cards))
-	localStorage.setItem('colors', JSON.stringify(colors))
+function setData(key, data) {
+	localStorage.setItem(key, JSON.stringify(data))
 }
-function getData(dataType) {
-	const stored = JSON.parse(localStorage.getItem(dataType))
-	if (stored) return stored
-	if (dataType == 'cards') return []
-	if (dataType == 'colors') {
-		const defaultColors = generatePastels()
-		return defaultColors
-	}
+function getData(key) {
+	const stored = JSON.parse(localStorage.getItem(key))
+	return stored
 }
 function generatePastels() {
 	const colors = []

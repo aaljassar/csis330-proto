@@ -1,3 +1,4 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@400&family=Ubuntu&display=swap');
 :root {
 	--text_light: #ebe8e1;
@@ -56,7 +57,7 @@ button {
 	border-radius: 5px;
 	text-wrap: nowrap;
 }
-
+i {pointer-events: none;}
 header nav,
 footer {
 	background-color: #eee;
@@ -87,7 +88,7 @@ nav {
 	}
 	& ul {
 		list-style: none;
-		& > * {
+		& li {
 			display: inline-block;
 			margin-left: clamp(2rem, 6vw, 5rem);
 		}
