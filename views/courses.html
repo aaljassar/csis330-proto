@@ -7,8 +7,9 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="/styles/globals.css">
 	<link rel="stylesheet" href="/styles/courses.css">
-	<script defer src="/scripts/GlobalNav.js"></script>
-	<script defer src="/scripts/Login.js"></script>
+	<script defer src="/scripts/components/GlobalNav.js"></script>
+	<script defer src="/scripts/components/Login.js"></script>
+	<script defer src="/scripts/components/CourseSelect.js"></script>
 	<script type="module" src="/scripts/courses.js"></script>
 </head>
 
@@ -30,7 +31,10 @@
 		</aside>
 
 		<section class="course-organizer">
-			<h2>Add your courses:</h2>
+			<div class="main-header">
+			<h2>Add your <em class="gradient-text">courses</em></h2>
+			<course-select></course-select>
+			</div>
 			<div class="card-container"></div>
 		</section>
 		<aside class="side-articles">

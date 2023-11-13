@@ -4,14 +4,16 @@
 		date picker
 		pdf reader
 		animations
+		overlap rows in addtion to columns
 */
 import { generateID, setLocalData, getLocalData, generatePastels } from '/scripts/utils.js'
-import CourseCard from '/scripts/CourseCard.js'
+import CourseCard from '/scripts/components/CourseCard.js'
 
 let colors = getLocalData('colors') || generatePastels()
 let courses = getLocalData('courses') || []
 const cardBox = document.querySelector('.card-container')
-const inactive = new CourseCard(CourseCard.defaultCourse, false)
+const inactive = new CourseCard(CourseCard.defaultCourse)
+inactive.classList.add('inactive')
 
 cardBox.addEventListener('click', e => {
 	if(e.target.classList.contains('remove')) {
@@ -38,11 +40,11 @@ function readForm() {
 	const id = generateID()
 	const courseData = {
 		code: 'TEST 111',
-		name: `Course #${id.slice(0,4)}`,
+		name: `Course #${id.slice(0, 4)}`,
 		credits: 3,
 		assignments: [CourseCard.defaultAssignment],
 		color: colors.pop(),
-		id: id
+		id: id,
 	}
 	return courseData
 }
