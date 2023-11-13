@@ -18,6 +18,7 @@ class CourseSelect extends HTMLElement {
 			option.textContent = Object.keys(category)
 			this.$('.category-select').append(option)
 		}
+		this.renderCourses(this.$('.category-select').value)
 		this.$('.category-select').onchange = () => this.renderCourses(this.$('.category-select').value)
 	}
 	renderCourses(category) {

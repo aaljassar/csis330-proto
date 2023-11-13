@@ -4,12 +4,16 @@ loginTemplate.innerHTML = /* html */ `
 	dialog {
 		border: none;
 		max-width: fit-content;
-		box-shadow: 0.5rem 0.5rem 1rem var(--fade2);
+		box-shadow: 0 0 1rem var(--fade1);
+		border-radius: 5px;
+		overflow: hidden;
 		margin: auto;
 	}
 	.modal-content {
 		display: flex;
 		flex-flow: column wrap;
+		gap: 0.5rem;
+		padding: 0.5rem;
 		justify-content: center;
 		background-color: #eee;
 		& input {
@@ -26,7 +30,7 @@ loginTemplate.innerHTML = /* html */ `
 	<div class="modal-content">
 		<input id="username-input" type="text" placeholder="Username" />
 		<input id="password-input" type="password" placeholder="Password" />
-		<button id="submit">Submit</button>
+		<button id="submit" class="bg-primary">Submit</button>
 	</div>
 </dialog>
 `

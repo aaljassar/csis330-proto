@@ -103,6 +103,7 @@ course-card .assignment-list {
 .raise {
 	transition: transform 0.3s ease-out,
 				box-shadow 0.3s ease;
+	z-index: 1;
 }
 .raise:hover {
 	z-index: 100;

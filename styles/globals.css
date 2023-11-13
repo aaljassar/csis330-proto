@@ -68,14 +68,6 @@ button {
 select {
 	max-width: 30ch;
 }
-select option *{
-	font-family: inherit;
-	max-width: 30ch;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	color: pink;
-	white-space: wrap;
-}
 i {pointer-events: none;}
 header nav,
 footer {
