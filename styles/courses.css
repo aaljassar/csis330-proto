@@ -33,7 +33,10 @@
 	/* grid-template-columns: repeat(auto-fit, 7rem); */
 	justify-content: center;
 }
-@media screen and (max-width: 48rem) {
+.card-container :nth-child(even) {
+	left: 3rem;
+}
+@media screen and (max-width: 35rem) {
 	.card-container {
 		display: flex;
 		flex-flow: row wrap;
@@ -57,6 +60,7 @@ course-card .header {
 	display: flex;
 	& .code {
 		font-family: monospace;
+		color: gray;
 		writing-mode: vertical-rl;
 		flex: 0;
 	}
