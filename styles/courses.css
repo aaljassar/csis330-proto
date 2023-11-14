@@ -40,10 +40,11 @@
 	background-color: #ddd;
 }
 .course-form course-select {
+	padding: 1rem;
 	max-height: 6ch;
-	display: flex;
-	flex-flow: row nowrap;
-	gap: 1rem;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	gap: 10px;
 }
 .card-container {
 	display: grid;
@@ -82,22 +83,27 @@ course-card .header {
 	width: 100%; 
 	height: 30%;
 	text-align: center;
-	display: flex;
+	position: relative;
 }
 course-card .header .code {
 	font-family: monospace;
 	color: var(--text_light);
 	writing-mode: vertical-rl;
-	flex: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
-course-card .header .remove {
+course-card .header .tooltip {
+	cursor: pointer;
 	transition: opacity 0.2s ease;
 	background-color: var(--fade2);
 	border-bottom-left-radius: 10px;
 	padding: 0.5rem;
 	opacity: 0;
-	flex: 0;
 	height: fit-content;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 course-card .header .name {
 	opacity: 0;
@@ -108,7 +114,7 @@ course-card:hover .header .code {
 course-card:hover .header .name {
 	opacity: 1;
 }
-course-card:hover .header .remove {
+course-card:hover .header .tooltip {
 	opacity: 1;
 }
 .visible .header .code {
@@ -121,8 +127,8 @@ course-card:hover .header .remove {
 	list-style: none;
 }
 .assignment-list .assignment {
+	margin: 0.5rem;
 	display: flex;
-	padding: 0.5rem;
 	gap: 0.5rem;
 	border-radius: 15px;
 	overflow: hidden;
@@ -137,13 +143,16 @@ course-card:hover .header .remove {
 	flex: 0 4rem;
 	white-space: nowrap;
 }
+.course-form .assignment-list .due {
+	flex: 0 10rem;
+}
 .raise {
 	transition: transform 0.3s ease-out,
 				box-shadow 0.3s ease;
 	z-index: 1;
 }
 .raise:hover {
-	z-index: 100;
+	z-index: 3;
 	transform: translateY(-.5rem);
 	box-shadow: 0 15px 30px var(--fade1);
 }

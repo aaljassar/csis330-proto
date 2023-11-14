@@ -20,12 +20,15 @@ class CourseCard extends HTMLElement {
 		<div class="header ${headerColor}">
 			<h5 class="code">${code}</h5>
 			<h5 class="name no-overflow">${name}</h5>
-			<button class="remove">
-				<i class="fa fa-trash"></i>
-				<div class="tooltip"></div>
-			</button>
+			<div class="tooltip">
+				<i class="fa-solid fa-ellipsis"></i>
+				<dialog class="tooltip-content spaced-out">
+					<button class="remove button-primary">Remove <i class="fa fa-trash"></i></button>
+					<button class="edit button-secondary">Edit <i class="fa fa-edit"></i></button>
+				</dialog>
+			</div>
 		</div>
-		<ul class="assignment-list">
+		<ul class="assignment-list spaced-out">
 		</ul>
 		`
 		this.#renderAssignments()

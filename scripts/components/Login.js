@@ -3,12 +3,12 @@ loginTemplate.innerHTML = /* html */ `
 <style>
 </style>
 
-<button class="bg-primary" id="show-login">Log In</button>
+<button class="button-primary" id="show-login">Log In</button>
 <dialog> 
 	<div class="modal-content">
 		<input id="username-input" type="text" placeholder="Username" />
 		<input id="password-input" type="password" placeholder="Password" />
-		<button id="submit" class="bg-primary">Submit</button>
+		<button id="submit" class="button-primary">Submit</button>
 	</div>
 </dialog>
 `

@@ -82,19 +82,29 @@ footer nav{
 	border: 1px solid #ddd;
 	height: 2rem;
 }
+
 .bg-primary {
 	background-color: var(--primary);
 	color: var(--text_light);
 }
-.bg-primary:hover {
+.bg-secondary {
+	background-color: var(--secondary);
+	color: var(--text_light);
+}
+.button-primary {
+	background-color: var(--primary);
+	color: var(--text_light);
+	transition: background-color 0.2s ease;
+}
+.button-primary:hover {
 	background-color: var(--primary_darker);
 }
-.bg-secondary {
+.button-secondary {
 	background-color: var(--secondary);
 	color: var(--text_light);
 	transition: background-color 0.2s ease;
 }
-.bg-secondary:hover {
+.button-secondary:hover {
 	background-color: var(--secondary_darker);
 }
 nav {
@@ -137,18 +147,24 @@ nav ul li.currentPage {
 	white-space: nowrap;
 }
 dialog {
-	max-width: fit-content;
-	max-height: fit-content;
 	border: none;
+	margin: auto;
+	background-color: transparent;
 	box-shadow: 0 0 1rem var(--fade1);
 	border-radius: 5px;
-	overflow: hidden;
 }
 .modal-content {
-	max-height: 30rem;
-	display: flex;
-	flex-flow: column nowrap;
-	gap: 0.5rem;
-	padding: 1rem;
+	max-height: fit-content;
+	max-width: fit-content;
+	padding: 1rem 0;
 	background-color: #eee;
+}
+.modal-content > button {
+	margin: 0 auto;
+}
+.spaced-out {
+	padding: 0.5rem 0;
+}
+.spaced-out > * {
+	margin: 0 0.5rem;
 }

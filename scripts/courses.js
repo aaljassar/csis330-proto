@@ -1,10 +1,9 @@
 /* todo:
-		add course input
-		assignments
-		date picker
 		pdf reader
 		animations
 		overlap rows in addtion to columns
+	fixme:
+		dialog modals not centered
 */
 import { setLocalData, getLocalData } from '/scripts/utils.js'
 import CourseCard from '/scripts/components/CourseCard.js'
@@ -16,11 +15,16 @@ const addCourseButton = createAddButton()
 $('.course-form').addEventListener('submit', e => {
 	e.preventDefault()
 	const courseData = readForm()
-	if(!courseData) return alert('Please ensure that course data is valid, and that assignments add up to 100%')
+	if(!courseData) return 
 	addCourse(courseData)
 	$('#course-inputs').close()
 })
 $('.card-container').addEventListener('click', e => {
+	if(e.target.classList.contains('tooltip')) {
+		const dialog = e.target.querySelector('dialog')
+		if(dialog.open) dialog.close()
+		else dialog.show()
+	}
 	if(e.target.classList.contains('remove')) {
 		const cardElement = e.target.closest('course-card')
 		removeCourse(cardElement)
@@ -54,9 +58,15 @@ function readForm() {
 		const percentNumber = parseInt(percent)
 		if(!isNaN(percentNumber)) percentSum += percentNumber
 	})
-	const preexistingCourse = courses.find(course => course.code == courseData.code)
-	console.log(percentSum);
-	if(percentSum !== 100 || preexistingCourse) return null
+	const preExistingCourse = courses.find(course => course.code == courseData.code)
+	if(preExistingCourse){
+		alert('Course already exists')
+		return null
+	}
+	if(percentSum !== 100) {
+		alert('Assignment % must add up to 100%')
+		return null
+	}
 	return courseData
 }
 function addCourse(courseData) {

@@ -10,8 +10,8 @@ class CourseSelect extends HTMLElement {
 	}
 	renderCategories() {
 		this.innerHTML = /* html */ `
-		<select size="1" class="category-select"></select>
-		<select size="1" class="course-select"></select>
+		<select  class="category-select"></select>
+		<select  class="course-select"></select>
 		`
 		for(const category in this.courseCategories) {
 			const option = document.createElement('option')
