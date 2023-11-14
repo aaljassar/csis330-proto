@@ -1,17 +1,17 @@
 class CourseSelect extends HTMLElement {
 	courseCategories
+	$
 	constructor() {
 		super()
 		this.$ = (selector) => this.querySelector(selector)
 	}
 	connectedCallback() {
 		this.queryCourses()
-		this.renderCategories()
 	}
 	renderCategories() {
 		this.innerHTML = /* html */ `
-		<select class="category-select"></select>
-		<select class="course-select"></select>
+		<select size="1" class="category-select"></select>
+		<select size="1" class="course-select"></select>
 		`
 		for(const category in this.courseCategories) {
 			const option = document.createElement('option')
@@ -41,13 +41,14 @@ class CourseSelect extends HTMLElement {
 		const stored = localStorage.getItem('courseCategories')
 		if(stored) {
 			this.courseCategories = JSON.parse(stored)
-			return
-		}
+			return this.renderCategories()
+			}
 		fetch('/assets/categorized_courses.json')
 		.then(response => response.json())
 		.then(data => {
 			localStorage.setItem('courseCategories', JSON.stringify(data) )
 			this.courseCategories = data
+			this.renderCategories()
 		})
 	}
 }

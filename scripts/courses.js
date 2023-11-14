@@ -6,23 +6,27 @@
 		animations
 		overlap rows in addtion to columns
 */
-import { generateID, setLocalData, getLocalData, generatePastels } from '/scripts/utils.js'
+import { setLocalData, getLocalData } from '/scripts/utils.js'
 import CourseCard from '/scripts/components/CourseCard.js'
 
-let colors = getLocalData('colors') || generatePastels()
 let courses = getLocalData('courses') || []
-const cardBox = document.querySelector('.card-container')
-const inactive = new CourseCard(CourseCard.defaultCourse)
-inactive.classList.add('inactive')
+const $ = (selector) => document.querySelector(selector)
+const addCourseButton = createAddButton()
 
-cardBox.addEventListener('click', e => {
+$('.course-form').addEventListener('submit', e => {
+	e.preventDefault()
+	const courseData = readForm()
+	if(!courseData) return alert('Please ensure that course data is valid, and that assignments add up to 100%')
+	addCourse(courseData)
+	$('#course-inputs').close()
+})
+$('.card-container').addEventListener('click', e => {
 	if(e.target.classList.contains('remove')) {
 		const cardElement = e.target.closest('course-card')
 		removeCourse(cardElement)
 	}
-	if(e.target.classList.contains('inactive')) {
-		const courseData = readForm()
-		addCourse(courseData)
+	if(e.target.id == 'add-course') {
+		$('#course-inputs').showModal()
 	}
 })
 document.addEventListener('login', init)
@@ -32,50 +36,71 @@ if (auth) init()
 
 function init() {
 	courses.forEach(courseData => {
-		cardBox.append(new CourseCard(courseData))
+		$('.card-container').append(new CourseCard(courseData))
 	})
-	renderCourseCards(false)
-}
-function readForm() {
-	const id = generateID()
-	const courseData = {
-		code: 'TEST 111',
-		name: `Course #${id.slice(0, 4)}`,
-		credits: 3,
-		assignments: [CourseCard.defaultAssignment],
-		color: colors.pop(),
-		id: id,
-	}
-	return courseData
-}
-function addCourse(courseData = CourseCard.defaultCourse) {
-	courses.push(courseData)
-	cardBox.append(new CourseCard(courseData))
 	renderCourseCards()
 }
-function renderCourseCards(save = true) {
-	if(courses.length < 8) cardBox.append(inactive)
-	else inactive.remove()
-	if(save) {
-		setLocalData('courses', courses)
-		setLocalData('colors', colors)
-	}
+function readForm() {
+	const assignments = $('#course-inputs').querySelectorAll('.assignment')
+	const courseData = $('course-select').getSelectedCourseData()
+	courseData.assignments = []
+	let percentSum = 0
+	assignments.forEach(assignment => {
+		const name = assignment.querySelector('.name').value
+		const percent = assignment.querySelector('.percent').value
+		const due = assignment.querySelector('.due').value
+		const assignmentData = {name, percent, due, weight: 0}
+		courseData.assignments.push(assignmentData)
+		const percentNumber = parseInt(percent)
+		if(!isNaN(percentNumber)) percentSum += percentNumber
+	})
+	const preexistingCourse = courses.find(course => course.code == courseData.code)
+	console.log(percentSum);
+	if(percentSum !== 100 || preexistingCourse) return null
+	return courseData
+}
+function addCourse(courseData) {
+	courses.push(courseData)
+	$('.card-container').append(new CourseCard(courseData))
+	renderCourseCards()
+}
+function renderCourseCards() {
+	if(courses.length < 8) $('.card-container').append(addCourseButton)
+	else addCourseButton.remove()
+	setLocalData('courses', courses)
 	adjustGridLayout()
 }
 function removeCourse(cardElement) {
-	const courseData = courses.find( course => course.id == cardElement.id)
+	const courseData = courses.find( course => course.code == cardElement.id)
 	cardElement.remove()
 	courses = courses.filter(course => course != courseData)
-	colors.push(courseData.color)
 	renderCourseCards()
 }
 function adjustGridLayout() {
-	const cardElements = cardBox.querySelectorAll('course-card')
+	const cardElements = $('.card-container').querySelectorAll('.card')
 	cardElements.forEach((card,index) => {
 		index += 1
 		const row = index <= 4 ? 1 : 2
 		const column = row == 1 ? index : index - 4
 		card.style.gridRow = row
 		card.style.gridColumn = `${column} / ${column + 2}`
+		if(index == 4 || index == 8) card.classList.add('visible')
+		else card.classList.remove('visible')
 	})
+	for(let i = 1; i < cardElements.length; i++) {
+		if(cardElements[i].classList.contains('inactive')) {
+			cardElements[i - 1].classList.add('visible')
+			break
+		}
+	}
+}
+function createAddButton() {
+	const addButtonTemplate = document.createElement('div')
+	addButtonTemplate.innerHTML = /* html */ `
+	<button id="add-course" class="card raise inactive">
+		<i class="fa fa-plus-square"></i>
+	</button>
+	`
+	const inner = addButtonTemplate.children[0]
+	return inner
 }

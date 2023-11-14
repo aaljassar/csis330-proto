@@ -1,28 +1,6 @@
 const loginTemplate = document.createElement('template')
 loginTemplate.innerHTML = /* html */ `
 <style>
-	dialog {
-		border: none;
-		max-width: fit-content;
-		box-shadow: 0 0 1rem var(--fade1);
-		border-radius: 5px;
-		overflow: hidden;
-		margin: auto;
-	}
-	.modal-content {
-		display: flex;
-		flex-flow: column wrap;
-		gap: 0.5rem;
-		padding: 0.5rem;
-		justify-content: center;
-		background-color: #eee;
-		& input {
-			padding: 0.75rem;
-		}
-		& button {
-			padding-left: 0.75rem;
-		}
-	}
 </style>
 
 <button class="bg-primary" id="show-login">Log In</button>
@@ -35,29 +13,27 @@ loginTemplate.innerHTML = /* html */ `
 </dialog>
 `
 class Login extends HTMLElement {
+	$ = (selector) => this.querySelector(selector)
 	constructor() {
 		super()
 	}
 	connectedCallback() {
 		this.append(loginTemplate.content.cloneNode(true))
-		const modal = this.querySelector('dialog')
-		this.querySelector('#show-login').onclick = () => modal.showModal()
-		this.querySelector('#submit').onclick = () => {
+		const modal = this.$('dialog')
+		this.$('#show-login').onclick = () => modal.showModal()
+		this.$('#submit').onclick = () => {
 			this.checkAuth()
 			modal.close()
 		}
-		// hide log-in when logged in then show when logged out
+		// hide log-in button when logged in then show when logged out
 	}
 	checkAuth = () => {
-		const usernameInput = this.querySelector('#username-input')
-		const passwordInput = this.querySelector('#password-input')
-		const username = usernameInput.value
-		const password = passwordInput.value
+		const username = this.$('#username-input').value
+		const password = this.$('#password-input').value
 		if (!username || !password) return console.log('missing username or password')
 		document.dispatchEvent(new CustomEvent('login'))
-		localStorage.setItem('auth', true)
-		usernameInput.value = ''
-		passwordInput.value = ''
+		const auth = true
+		localStorage.setItem('auth', JSON.stringify(auth) )
 	}
 }
 customElements.define('log-in', Login)
