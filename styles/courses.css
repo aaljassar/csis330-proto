@@ -20,7 +20,22 @@
 	padding-left: 1rem;
 }
 .sidebar li::marker{color: var(--accent);}
+.sidebar .due-soon li {
+	border-radius: 5px;
+	padding: 0.3rem;
+	margin: 0.2rem;
+}
+.side-articles {
+	background-color: #eee;
+	padding: 0.5rem;
+	border-radius: 15px;
+	height: fit-content;
+}
 .side-articles article{
+	max-height: 40vh;
+	overflow-y: scroll;
+	text-overflow: ellipsis;
+	margin: 0.5rem 0;
 	background-color: var(--secondary_fade);
 	border-radius: 30px;
 	padding: 1rem;
@@ -28,28 +43,52 @@
 .side-articles article h3{
 	margin-bottom: 0.5rem;
 }
-.course-organizer > *{
-	margin: 0.5rem 0;
+.course-organizer {
+	display: grid;
+	gap: 1rem;
+
 }
 .courses-header {
 	margin-bottom: 1rem;
 }
-.line {
-	height: 3px;
-	border-radius: 10px;
-	background-color: #ddd;
+#course-inputs {
+	margin: auto;
 }
 .course-form course-select {
-	padding: 1rem;
+	width: 100%;
 	max-height: 6ch;
+	overflow: hidden;
 	display: grid;
-	grid-template-columns: 50% 50%;
-	gap: 10px;
+	grid-template-columns: 50% 1fr;
+	gap: 0.5rem;
+}
+.course-form course-select select {
+	width: 100%;
+	margin: 1px;
+}
+.assignment-list {
+	display: grid;
+	gap: 1rem;
+}
+.assignment-list .assignment {
+	display: grid;
+	grid-template-columns: 50% 5ch 1ch 1fr;
+	gap: 0.5rem;
+	border-radius: 15px;
+}
+course-card .assignment-list .assignment {
+	grid-template-columns: 50% 3ch 1ch 1fr;
+	gap: 0.5rem;
+}
+.assignment-list .assignment > * {
+	text-align: center;
+	border-bottom: 1px solid #333;
 }
 .card-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 7rem);
 	justify-content: center;
+	align-items: center;
 }
 @media screen and (max-width: 40rem) {
 	.card-container {
@@ -76,12 +115,16 @@
 .inactive i {
 	font-size: 5rem;
 }
+.inactive.raise:hover {
+	box-shadow: 0 15px 30px var(--fade2);
+}
 course-card {
 	overflow: hidden;
 }
 course-card .header {
 	width: 100%; 
-	height: 30%;
+	height: 33%;
+	padding: 0.5rem;
 	text-align: center;
 	position: relative;
 }
@@ -89,6 +132,8 @@ course-card .header .code {
 	font-family: monospace;
 	color: var(--text_light);
 	writing-mode: vertical-rl;
+	padding: 0.5rem;
+	white-space: nowrap;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -104,6 +149,14 @@ course-card .header .tooltip {
 	position: absolute;
 	top: 0;
 	right: 0;
+}
+course-card .header .tooltip .tooltip-content {
+	background: #eee;
+	margin-top: 1rem;
+	margin-right: 1rem;
+}
+course-card .header .tooltip .tooltip-content > button{
+	width: 100%;
 }
 course-card .header .name {
 	opacity: 0;
@@ -123,29 +176,6 @@ course-card:hover .header .tooltip {
 .visible .header .name {
 	opacity: 1;
 }
-.assignment-list {
-	list-style: none;
-}
-.assignment-list .assignment {
-	margin: 0.5rem;
-	display: flex;
-	gap: 0.5rem;
-	border-radius: 15px;
-	overflow: hidden;
-}
-.assignment-list .assignment > * {
-	text-align: center;
-	border-bottom: 1px solid #333;
-}
-.assignment-list .name {flex: 1;}
-.assignment-list .percent {flex: 0 3rem;}
-.assignment-list .due {
-	flex: 0 4rem;
-	white-space: nowrap;
-}
-.course-form .assignment-list .due {
-	flex: 0 10rem;
-}
 .raise {
 	transition: transform 0.3s ease-out,
 				box-shadow 0.3s ease;
@@ -155,7 +185,4 @@ course-card:hover .header .tooltip {
 	z-index: 3;
 	transform: translateY(-.5rem);
 	box-shadow: 0 15px 30px var(--fade1);
-}
-.inactive.raise:hover {
-	box-shadow: 0 15px 30px var(--fade2);
 }

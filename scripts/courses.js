@@ -14,14 +14,14 @@ const addCourseButton = createAddButton()
 
 $('.course-form').addEventListener('submit', e => {
 	e.preventDefault()
+	console.log('submit clicked')
 	const courseData = readForm()
 	if(!courseData) return 
 	addCourse(courseData)
-	$('#course-inputs').close()
 })
 $('.card-container').addEventListener('click', e => {
 	if(e.target.classList.contains('tooltip')) {
-		const dialog = e.target.querySelector('dialog')
+		const dialog = e.target.querySelector('.tooltip-content')
 		if(dialog.open) dialog.close()
 		else dialog.show()
 	}

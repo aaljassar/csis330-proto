@@ -22,13 +22,13 @@ class CourseCard extends HTMLElement {
 			<h5 class="name no-overflow">${name}</h5>
 			<div class="tooltip">
 				<i class="fa-solid fa-ellipsis"></i>
-				<dialog class="tooltip-content spaced-out">
-					<button class="remove button-primary">Remove <i class="fa fa-trash"></i></button>
-					<button class="edit button-secondary">Edit <i class="fa fa-edit"></i></button>
+				<dialog class="tooltip-content">
+					<button class="remove bg-secondary--faded">Remove <i class="fa fa-trash"></i></button>
+					<button class="edit   bg-secondary--faded">Edit <i class="fa fa-edit"></i></button>
 				</dialog>
 			</div>
 		</div>
-		<ul class="assignment-list spaced-out">
+		<ul class="assignment-list">
 		</ul>
 		`
 		this.#renderAssignments()
@@ -48,7 +48,7 @@ class CourseCard extends HTMLElement {
 		assignmentTemplate.innerHTML = /* html */ `
 		<li class="assignment">
 			<small class="name no-wrap no-overflow">${name}</small>
-			<small class="percent">${percent}%</small>
+			<small class="percent">${percent}</small>%
 			<small class="due">${dueShort}</small>
 		</li>
 		`

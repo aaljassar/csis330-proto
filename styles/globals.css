@@ -44,6 +44,9 @@ h3    {font-size: 2rem; /* 31.2px */}
 h4    {font-size: 1.5rem; /* 24.96px */}
 h5    {font-size: 1.2rem; /* 20px */}
 small {font-size: 0.8rem; /* 12.8px */}
+small {
+	color: darkslategrey;
+}
 
 form, input, button, select, option{
 	display: block;
@@ -57,7 +60,6 @@ form, input, button, select, option{
 	background-color: white;
 }
 input, select {
-	min-width: 0px;
 	max-height: fit-content;
 	padding: 0.5rem;
 	border-radius: 5px;
@@ -68,7 +70,7 @@ input:hover, select:hover {
 }
 button {
 	cursor: pointer;
-	padding: 0.5rem;
+	padding: 0.4rem;
 	border-radius: 5px;
 	text-wrap: nowrap;
 }
@@ -81,31 +83,6 @@ footer nav{
 	background-color: #eee;
 	border: 1px solid #ddd;
 	height: 2rem;
-}
-
-.bg-primary {
-	background-color: var(--primary);
-	color: var(--text_light);
-}
-.bg-secondary {
-	background-color: var(--secondary);
-	color: var(--text_light);
-}
-.button-primary {
-	background-color: var(--primary);
-	color: var(--text_light);
-	transition: background-color 0.2s ease;
-}
-.button-primary:hover {
-	background-color: var(--primary_darker);
-}
-.button-secondary {
-	background-color: var(--secondary);
-	color: var(--text_light);
-	transition: background-color 0.2s ease;
-}
-.button-secondary:hover {
-	background-color: var(--secondary_darker);
 }
 nav {
 	display: flex;
@@ -132,6 +109,21 @@ nav ul li.currentPage {
 	background-color: white;
 	border-bottom: 2px solid var(--accent);
 }
+dialog {
+	border: none;
+	margin: auto;
+	background-color: transparent;
+	box-shadow: 0 0 1rem var(--fade1);
+	border-radius: 5px;
+}
+.modal-content {
+	display: grid;
+	gap: 1rem;
+	padding: 1rem;
+	max-height: fit-content;
+	background-color: #eee;
+}
+/* utility classes */
 .gradient-text {
 	background: linear-gradient(90deg, var(--accent), var(--primary));
 	background-clip: text;
@@ -146,25 +138,43 @@ nav ul li.currentPage {
 .no-wrap {
 	white-space: nowrap;
 }
-dialog {
-	border: none;
-	margin: auto;
-	background-color: transparent;
-	box-shadow: 0 0 1rem var(--fade1);
-	border-radius: 5px;
+.line {
+	height: 3px;
+	border-radius: 10px;
+	background-color: #ddd;
 }
-.modal-content {
-	max-height: fit-content;
-	max-width: fit-content;
-	padding: 1rem 0;
-	background-color: #eee;
+.black {
+	background-color: black;
 }
-.modal-content > button {
-	margin: 0 auto;
+.bg-primary {
+	background-color: var(--primary);
+	color: var(--text_light);
 }
-.spaced-out {
-	padding: 0.5rem 0;
+.bg-secondary {
+	background-color: var(--secondary);
+	color: var(--text_dark);
 }
-.spaced-out > * {
-	margin: 0 0.5rem;
+.bg-primary--faded {
+	background-color: var(--primary_fade);
+	color: var(--text_dark);
+}
+.bg-secondary--faded {
+	background-color: var(--secondary_fade);
+	color: var(--text_dark);
+}
+.button-primary {
+	background-color: var(--primary);
+	color: var(--text_light);
+	transition: background-color 0.2s ease;
+}
+.button-primary:hover {
+	background-color: var(--primary_darker);
+}
+.button-secondary {
+	background-color: var(--secondary);
+	color: var(--text_light);
+	transition: background-color 0.2s ease;
+}
+.button-secondary:hover {
+	background-color: var(--secondary_darker);
 }
