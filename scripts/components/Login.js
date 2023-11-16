@@ -21,15 +21,17 @@ class Login extends HTMLElement {
 			}
 			this.$('dialog').close()
 		}
-		// hide log-in button when logged in then show when logged out
+		const isAuth = true === JSON.parse(localStorage.getItem('isAuthenticated'))
+		if(isAuth) this.$('#show-login').style.display = 'none'
+		document.addEventListener('login', () => this.$('#show-login').style.display = 'none')
 	}
 	checkAuth = () => {
 		const username = this.$('#username-input').value
 		const password = this.$('#password-input').value
 		if (!username || !password) return false
 		document.dispatchEvent(new CustomEvent('login'))
-		const auth = true
-		localStorage.setItem('auth', JSON.stringify(auth) )
+		const isAuthenticated = true
+		localStorage.setItem('isAuthenticated', JSON.stringify(isAuthenticated) )
 		return true
 	}
 }

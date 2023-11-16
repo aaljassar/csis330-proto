@@ -1,25 +1,23 @@
-/* todo:
+/*  TODO:
+		allow assignment editing
 		pdf reader
 		animations
-		overlap rows in addtion to columns
-	fixme:
-		dialog modals not centered
+		overlap rows in addition to columns
 */
 import { setLocalData, getLocalData } from '/scripts/utils.js'
 import CourseCard from '/scripts/components/CourseCard.js'
 
+const addCourseButton = document.querySelector('#add-course')
 let courses = getLocalData('courses') || []
-const $ = (selector) => document.querySelector(selector)
-const addCourseButton = createAddButton()
 
-$('.course-form').addEventListener('submit', e => {
+document.querySelector('.course-form').addEventListener('submit', e => {
 	e.preventDefault()
-	console.log('submit clicked')
 	const courseData = readForm()
-	if(!courseData) return 
+	if(!courseData) return
 	addCourse(courseData)
+		document.querySelector('#course-inputs').close()
 })
-$('.card-container').addEventListener('click', e => {
+document.querySelector('.card-container').addEventListener('click', e => {
 	if(e.target.classList.contains('tooltip')) {
 		const dialog = e.target.querySelector('.tooltip-content')
 		if(dialog.open) dialog.close()
@@ -30,23 +28,24 @@ $('.card-container').addEventListener('click', e => {
 		removeCourse(cardElement)
 	}
 	if(e.target.id == 'add-course') {
-		$('#course-inputs').showModal()
+		document.querySelector('#course-inputs').showModal()
 	}
 })
 document.addEventListener('login', init)
-// init courses:
-const auth = getLocalData('auth')
-if (auth) init()
+document.addEventListener('DOMContentLoaded', init)
 
 function init() {
+	adjustGridLayout()
+	const isAuthenticated = getLocalData('isAuthenticated')
+	if (!isAuthenticated) return
 	courses.forEach(courseData => {
-		$('.card-container').append(new CourseCard(courseData))
+		document.querySelector('.card-container').append(new CourseCard(courseData))
 	})
 	renderCourseCards()
 }
 function readForm() {
-	const assignments = $('#course-inputs').querySelectorAll('.assignment')
-	const courseData = $('course-select').getSelectedCourseData()
+	const assignments = document.querySelector('#course-inputs').querySelectorAll('.assignment')
+	const courseData = document.querySelector('course-select').getSelectedCourseData()
 	courseData.assignments = []
 	let percentSum = 0
 	assignments.forEach(assignment => {
@@ -64,18 +63,18 @@ function readForm() {
 		return null
 	}
 	if(percentSum !== 100) {
-		alert('Assignment % must add up to 100%')
+		alert('Assignment percentages must add up to 100%')
 		return null
 	}
 	return courseData
 }
 function addCourse(courseData) {
 	courses.push(courseData)
-	$('.card-container').append(new CourseCard(courseData))
+	document.querySelector('.card-container').append(new CourseCard(courseData))
 	renderCourseCards()
 }
 function renderCourseCards() {
-	if(courses.length < 8) $('.card-container').append(addCourseButton)
+	if(courses.length < 8) document.querySelector('.card-container').append(addCourseButton)
 	else addCourseButton.remove()
 	setLocalData('courses', courses)
 	adjustGridLayout()
@@ -87,30 +86,21 @@ function removeCourse(cardElement) {
 	renderCourseCards()
 }
 function adjustGridLayout() {
-	const cardElements = $('.card-container').querySelectorAll('.card')
-	cardElements.forEach((card,index) => {
-		index += 1
+	const cardElements = document.querySelector('.card-container').children
+	for (let index = 1; index <= cardElements.length; index++) {
+		const card = cardElements[index - 1]
+
 		const row = index <= 4 ? 1 : 2
 		const column = row == 1 ? index : index - 4
 		card.style.gridRow = row
 		card.style.gridColumn = `${column} / ${column + 2}`
+
 		if(index == 4 || index == 8) card.classList.add('visible')
 		else card.classList.remove('visible')
-	})
-	for(let i = 1; i < cardElements.length; i++) {
-		if(cardElements[i].classList.contains('inactive')) {
-			cardElements[i - 1].classList.add('visible')
-			break
+	}
+	for (let index = 1; index < cardElements.length; index++) {
+		if(cardElements[index].classList.contains('inactive')) {
+			cardElements[index - 1].classList.add('visible')
 		}
 	}
-}
-function createAddButton() {
-	const addButtonTemplate = document.createElement('div')
-	addButtonTemplate.innerHTML = /* html */ `
-	<button id="add-course" class="card raise inactive">
-		<i class="fa fa-plus-square"></i>
-	</button>
-	`
-	const inner = addButtonTemplate.children[0]
-	return inner
 }

@@ -42,7 +42,7 @@ class CourseSelect extends HTMLElement {
 		if(stored) {
 			this.courseCategories = JSON.parse(stored)
 			return this.renderCategories()
-			}
+		}
 		fetch('/assets/categorized_courses.json')
 		.then(response => response.json())
 		.then(data => {
