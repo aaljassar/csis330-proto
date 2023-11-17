@@ -1,9 +1,7 @@
 class CourseSelect extends HTMLElement {
 	courseCategories
-	$
 	constructor() {
 		super()
-		this.$ = (selector) => this.querySelector(selector)
 	}
 	connectedCallback() {
 		this.queryCourses()
@@ -16,13 +14,13 @@ class CourseSelect extends HTMLElement {
 		for(const category in this.courseCategories) {
 			const option = document.createElement('option')
 			option.textContent = category
-			this.$('.category-select').append(option)
+			this.querySelector('.category-select').append(option)
 		}
 		this.renderCourses()
-		this.$('.category-select').onchange = () => this.renderCourses()
+		this.querySelector('.category-select').onchange = () => this.renderCourses()
 	}
 	renderCourses() {
-		const category = this.$('.category-select').value
+		const category = this.querySelector('.category-select').value
 		const courses = this.courseCategories[category]
 		const frag = document.createDocumentFragment()
 		for(const course of courses) {
@@ -32,10 +30,10 @@ class CourseSelect extends HTMLElement {
 			option.value = JSON.stringify(course)
 			frag.append(option)
 		}
-		this.$('.course-select').replaceChildren(frag)
+		this.querySelector('.course-select').replaceChildren(frag)
 	}
 	getSelectedCourseData() {
-		return JSON.parse(this.$('.course-select').value)
+		return JSON.parse(this.querySelector('.course-select').value)
 	}
 	queryCourses() {
 		const stored = localStorage.getItem('courseCategories')

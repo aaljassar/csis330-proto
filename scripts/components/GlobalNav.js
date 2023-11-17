@@ -1,11 +1,26 @@
 const template = document.createElement('template')
 template.innerHTML = /* html */ `
-<ul>
+<style>
+.links {
+	list-style: none;
+}
+.links li {
+	padding: 0.5rem;
+	height: 100%;
+	display: inline-block;
+	margin-left: clamp(0.5rem, 6vw, 5rem);
+}
+.links li.currentPage {
+	background-color: white;
+	border-bottom: 2px solid var(--accent);
+}
+</style>
+<ul class="links">
 	<li><a href="/">Home</a></li>
 	<li><a href="/views/courses.html">Courses</a></li>
-	<li><a href="/views">GPA Calc</a></li>
-	<li><a href="/views">Articles</a></li>
-	<li><a href="/views">About</a></li>
+	<li><a href="/views/gpa.html">GPA Calc</a></li>
+	<li><a href="/views/blog.html">Blog</a></li>
+	<li><a href="/views/about.html">About</a></li>
 </ul>
 `
 class GlobalNav extends HTMLElement {

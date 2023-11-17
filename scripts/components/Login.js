@@ -1,5 +1,4 @@
 class Login extends HTMLElement {
-	$ = (selector) => this.querySelector(selector)
 	constructor() {
 		super()
 	}
@@ -14,20 +13,20 @@ class Login extends HTMLElement {
 			</div>
 		</dialog>
 		`
-		this.$('#show-login').onclick = () => this.$('dialog').showModal()
-		this.$('#submit').onclick = () => {
+		this.querySelector('#show-login').onclick = () => this.querySelector('dialog').showModal()
+		this.querySelector('#submit').onclick = () => {
 			if(!this.checkAuth()) {
 				return alert('missing username or password')
 			}
-			this.$('dialog').close()
+			this.querySelector('dialog').close()
 		}
 		const isAuth = true === JSON.parse(localStorage.getItem('isAuthenticated'))
-		if(isAuth) this.$('#show-login').style.display = 'none'
-		document.addEventListener('login', () => this.$('#show-login').style.display = 'none')
+		if(isAuth) this.querySelector('#show-login').style.display = 'none'
+		document.addEventListener('login', () => this.querySelector('#show-login').style.display = 'none')
 	}
 	checkAuth = () => {
-		const username = this.$('#username-input').value
-		const password = this.$('#password-input').value
+		const username = this.querySelector('#username-input').value
+		const password = this.querySelector('#password-input').value
 		if (!username || !password) return false
 		document.dispatchEvent(new CustomEvent('login'))
 		const isAuthenticated = true

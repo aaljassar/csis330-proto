@@ -1,5 +1,6 @@
 /*  TODO:
 		allow assignment editing
+		priority graph
 		pdf reader
 		animations
 		overlap rows in addition to columns
@@ -15,18 +16,18 @@ document.querySelector('.course-form').addEventListener('submit', e => {
 	const courseData = readForm()
 	if(!courseData) return
 	addCourse(courseData)
-		document.querySelector('#course-inputs').close()
+	document.querySelector('#course-inputs').close()
+})
+document.querySelector('.card-container').addEventListener('remove-course', e => {
+	const cardElement = e.detail	
+	removeCourse(cardElement)
+})
+document.querySelector('.card-container').addEventListener('assignments-edited', e => {
+	const cardElement = e.detail	
+	const course = courses.find(course => course.code == cardElement.id)
+	course.assignments = cardElement.courseData.assignments
 })
 document.querySelector('.card-container').addEventListener('click', e => {
-	if(e.target.classList.contains('tooltip')) {
-		const dialog = e.target.querySelector('.tooltip-content')
-		if(dialog.open) dialog.close()
-		else dialog.show()
-	}
-	if(e.target.classList.contains('remove')) {
-		const cardElement = e.target.closest('course-card')
-		removeCourse(cardElement)
-	}
 	if(e.target.id == 'add-course') {
 		document.querySelector('#course-inputs').showModal()
 	}
@@ -35,35 +36,25 @@ document.addEventListener('login', init)
 document.addEventListener('DOMContentLoaded', init)
 
 function init() {
-	adjustGridLayout()
+	adjustLayout()
 	const isAuthenticated = getLocalData('isAuthenticated')
-	if (!isAuthenticated) return
+	if (isAuthenticated === false) return
 	courses.forEach(courseData => {
 		document.querySelector('.card-container').append(new CourseCard(courseData))
 	})
 	renderCourseCards()
 }
 function readForm() {
-	const assignments = document.querySelector('#course-inputs').querySelectorAll('.assignment')
+	const assignmentForm = document.querySelector('#course-inputs assignment-form')
 	const courseData = document.querySelector('course-select').getSelectedCourseData()
-	courseData.assignments = []
-	let percentSum = 0
-	assignments.forEach(assignment => {
-		const name = assignment.querySelector('.name').value
-		const percent = assignment.querySelector('.percent').value
-		const due = assignment.querySelector('.due').value
-		const assignmentData = {name, percent, due, weight: 0}
-		courseData.assignments.push(assignmentData)
-		const percentNumber = parseInt(percent)
-		if(!isNaN(percentNumber)) percentSum += percentNumber
-	})
+	courseData.assignments = assignmentForm.getAssignments()
 	const preExistingCourse = courses.find(course => course.code == courseData.code)
 	if(preExistingCourse){
 		alert('Course already exists')
 		return null
 	}
-	if(percentSum !== 100) {
-		alert('Assignment percentages must add up to 100%')
+	if(assignmentForm.checkValidity() === false) {
+		alert('Assignment data is invalid, ensure that percentages add up to 100%')
 		return null
 	}
 	return courseData
@@ -77,7 +68,7 @@ function renderCourseCards() {
 	if(courses.length < 8) document.querySelector('.card-container').append(addCourseButton)
 	else addCourseButton.remove()
 	setLocalData('courses', courses)
-	adjustGridLayout()
+	adjustLayout()
 }
 function removeCourse(cardElement) {
 	const courseData = courses.find( course => course.code == cardElement.id)
@@ -85,7 +76,7 @@ function removeCourse(cardElement) {
 	courses = courses.filter(course => course != courseData)
 	renderCourseCards()
 }
-function adjustGridLayout() {
+function adjustLayout() {
 	const cardElements = document.querySelector('.card-container').children
 	for (let index = 1; index <= cardElements.length; index++) {
 		const card = cardElements[index - 1]

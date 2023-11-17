@@ -15,15 +15,26 @@
 	height: fit-content;
 	max-width: fit-content;
 }
-.sidebar ul{
+aside ul{
 	margin-top: 0.5rem;
 	padding-left: 1rem;
 }
-.sidebar li::marker{color: var(--accent);}
+aside li{
+	margin-top: 0.5rem;
+}
+aside li::marker{color: var(--accent);}
 .sidebar .due-soon li {
 	border-radius: 5px;
 	padding: 0.3rem;
 	margin: 0.2rem;
+}
+aside .tips  {
+	position: relative;
+}
+aside .tips a {
+	position: absolute;
+	right: 0;
+	color: var(--accent);
 }
 .side-articles {
 	background-color: #eee;
@@ -59,7 +70,7 @@
 	max-height: 6ch;
 	overflow: hidden;
 	display: grid;
-	grid-template-columns: 50% 1fr;
+	grid-template-columns: 40% 1fr;
 	gap: 0.5rem;
 }
 .course-form course-select select {
@@ -68,11 +79,13 @@
 }
 .assignment-list {
 	display: grid;
-	gap: 1rem;
+	grid-template-rows: repeat(7,1fr);
+	gap: 0.5rem;
 }
 .assignment-list .assignment {
+	height: fit-content;
 	display: grid;
-	grid-template-columns: 50% 5ch 1ch 1fr;
+	grid-template-columns: 40% 1fr 1ch 40%;
 	gap: 0.5rem;
 	border-radius: 15px;
 }
@@ -90,7 +103,6 @@
 	.card-container {
 		display: flex;
 		flex-flow: row wrap;
-		position: static;
 	}
 	.inactive.card {
 		max-width: 14rem;
@@ -98,17 +110,41 @@
 	}
 }
 .card {
-	/* position: absolute; */
 	background-color: white;
 	aspect-ratio: 10/16;
 	border: 1px solid var(--fade2);
 	border-radius: 15px;
 }
 .inactive {
-	background-color: var(--fade2);
+	background: rgba(255, 255, 255, 0.9);
+	border: 5px solid var(--accent);
+	color: var(--primary);
 }
 .inactive i {
 	font-size: 5rem;
+}
+.card-container :first-child.inactive {
+	animation: hop 1s ease-out infinite;
+}
+@keyframes hop {
+	50% {
+		transform: translateY(-0.5rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.raise {
+	transition: transform 0.3s ease-out,
+				box-shadow 0.3s ease;
+	z-index: 1;
+}
+.raise:not(:first-child.inactive):hover {
+	z-index: 100;
+	transform: translateY(-0.5rem);
+}
+.inactive.raise:hover {
+	box-shadow: 0 15px 30px var(--fade2);
 }
 course-card.visible .header .code {
 	opacity: 0;
@@ -124,16 +160,4 @@ course-card:hover .header .name {
 }
 course-card:hover .header .tooltip {
 	opacity: 1;
-}
-.raise {
-	transition: transform 0.3s ease-out,
-				box-shadow 0.3s ease;
-	z-index: 1;
-}
-.raise:hover {
-	z-index: 100;
-	transform: translateY(-.5rem);
-}
-.inactive.raise:hover {
-	box-shadow: 0 15px 30px var(--fade2);
 }

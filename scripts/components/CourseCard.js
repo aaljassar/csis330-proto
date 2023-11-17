@@ -1,10 +1,31 @@
-const courseStyle = document.createElement('template')
-courseStyle.innerHTML = /* html */ `
+const styleTemplate = /* html */ `
 <style>
 .course-card {
 	overflow: hidden;
-	height: 100%;
-	width: 100%;
+}
+.course-card.primary {
+	--color: var(--primary);
+	--color_faded: var(--primary_fade);
+	--text: var(--text_light);
+}
+.course-card.secondary {
+	--color: var(--secondary);
+	--color_faded: var(--secondary_fade);
+	--text: var(--text_dark);
+}
+.course-card {
+	box-shadow: 0.3rem 0.5rem 0 var(--color);
+}
+.course-card .header {
+	background: var(--color);
+	color: var(--text);
+}
+.course-card .header .tooltip-content{
+	background: var(--color);
+	color: var(--text);
+}
+.course-card .body {
+	background: var(--color_faded);
 }
 .course-card .body {
 	height: 67%;
@@ -15,7 +36,6 @@ courseStyle.innerHTML = /* html */ `
 	padding: 0.5rem;
 	text-align: center;
 	position: relative;
-	z-index: 0;
 }
 .course-card .header .code {
 	font-family: monospace;
@@ -23,32 +43,30 @@ courseStyle.innerHTML = /* html */ `
 	writing-mode: vertical-rl;
 	padding: 0.5rem;
 	white-space: nowrap;
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 .course-card .header .tooltip {
 	cursor: pointer;
 	transition: opacity 0.2s ease;
-	background-color: var(--fade2);
-	border-bottom-left-radius: 10px;
+	background-color: var(--fade1);
+	border-bottom-right-radius: 10px;
 	padding: 0.5rem;
 	opacity: 0;
-	height: fit-content;
-	position: absolute;
-	top: 0;
-	right: 0;
+}
+.course-card .header .tooltip > i {
+	rotate: 90deg;
+	font-size: 1.5rem;
 }
 .course-card .header .tooltip .tooltip-content {
-	background: #eee;
+	border: 1px solid #ddd;
 	margin-top: 1rem;
-	margin-right: 1rem;
+	margin-left: 1rem;
 }
-.course-card .header .tooltip .tooltip-content  > button{
+.course-card .header .tooltip .tooltip-content button {
+	background: transparent;
 	width: 100%;
 }
 .course-card .header .name {
-	z-index: 1;
+	width: 13rem;
 	opacity: 0;
 }
 .course-card .assignment-list {
@@ -58,13 +76,17 @@ courseStyle.innerHTML = /* html */ `
 	grid-template-columns: 50% 3ch 1ch 1fr;
 	gap: 0.5rem;
 }
+.sticky {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 </style>
 `
 class CourseCard extends HTMLElement {
 	static defaultAssignment = {name: 'default assignment', percent: '100', due: '2000-01-01', weight: 10}
 	static defaultCourse = {code: 'DFLT 000', name: 'default', credits: 10, assignments: [this.defaultAssignment] }
-	courseData
-	$ = (selector) => this.querySelector(selector)
+	courseData = CourseCard.defaultCourse
 	constructor(courseData) {
 		super()
 		this.courseData = courseData
@@ -74,27 +96,33 @@ class CourseCard extends HTMLElement {
 	connectedCallback() {
 		const {code, name} = this.courseData
 		this.isLab = code.endsWith('L')
-		const headerStyle = this.isLab ? 'bg-secondary' : 'bg-primary'
-		const bodyStyle = this.isLab ? 'bg-secondary--faded' : 'bg-primary--faded'
-		const shadowColor = this.isLab ? 'shadow-secondary' : 'shadow-primary'
+		const styleClass = this.isLab ? 'secondary' : 'primary'
 		const template = /* html */ `
-		<div class="course-card card ${shadowColor}">
-			<div class="header ${headerStyle}">
-				<h5 class="code">${code}</h5>
+		<div class="course-card card ${styleClass}">
+			<div class="header">
+				<h5 class="code sticky">${code}</h5>
 				<h5 class="name no-overflow">${name}</h5>
-				<div class="tooltip">
+				<div class="tooltip sticky">
 					<i class="fa-solid fa-ellipsis"></i>
 					<dialog class="tooltip-content">
-						<button class="remove bg-secondary--faded">Remove <i class="fa fa-trash"></i></button>
-						<button class="edit   bg-secondary--faded">Edit <i class="fa fa-edit"></i></button>
+						<button class="remove">Remove <i class="fa fa-trash"></i></button>
+						<button class="edit">Edit <i class="fa fa-edit"></i></button>
 					</dialog>
 				</div>
 			</div>
-			<ul class="body assignment-list ${bodyStyle}"></ul>
+			<ul class="body assignment-list"></ul>
 		</div>
 		`
-		this.insertAdjacentHTML('beforeend', courseStyle.innerHTML)
+		this.insertAdjacentHTML('beforeend', styleTemplate)
 		this.insertAdjacentHTML('beforeend', template)
+		this.querySelector('.remove').onclick = () => {
+			this.dispatchEvent(new CustomEvent('remove-course', {detail: this}))
+		}
+		this.querySelector('.tooltip').onclick = () => {
+			const dialog = this.querySelector('.tooltip-content')
+			if(dialog.open) dialog.close()
+			else dialog.show()
+		}
 		this.#renderAssignments()
 	}
 	updateAssignments(assignments) {
@@ -103,25 +131,23 @@ class CourseCard extends HTMLElement {
 	}
 	#renderAssignments() {
 		const { assignments } = this.courseData
-		const list = this.$('.assignment-list')
+		const list = this.querySelector('.assignment-list')
 		list.replaceChildren()
 		assignments.forEach(assignment => {
-			list.append(CourseCard.#createAssignment(assignment))
+			list.insertAdjacentHTML('beforeend', CourseCard.#createAssignment(assignment))
 		})
 	}
 	static #createAssignment(assignmentData) {
 		const {name, percent, due} = assignmentData
 		const dueShort = due.slice(5)
-		const assignmentTemplate = document.createElement('div')
-		assignmentTemplate.innerHTML = /* html */ `
+		const assignmentTemplate = /* html */ `
 		<li class="assignment">
 			<small class="name no-wrap no-overflow">${name}</small>
 			<small class="percent">${percent}</small>%
 			<small class="due">${dueShort}</small>
 		</li>
 		`
-		const inner = assignmentTemplate.children[0]
-		return inner
+		return assignmentTemplate
 	}
 }
 customElements.define('course-card', CourseCard)

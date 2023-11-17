@@ -30,14 +30,15 @@ a {
 	color: inherit;
 }
 a:hover {
+	color: var(--accent);
 	text-decoration: underline;
 }
 h1,h2,h3,h4,h5 {
 	font-family: 'Trispace';
 	text-wrap: balance;
 }
-/* typescaled using https://realtimecolors.com */
-html  {font-size: 100%;}    /* 16px */
+/* typescaled using external tool */
+html  {font-size: 100%;    /* 16px */}
 h1    {font-size: 3rem; /* 48.8px */}
 h2    {font-size: 2.5rem; /* 39.04px */}
 h3    {font-size: 2rem; /* 31.2px */}
@@ -47,7 +48,7 @@ small {font-size: 0.8rem; /* 12.8px */}
 small {
 	color: darkslategrey;
 }
-
+/* override default form default styles */
 form, input, button, select, option{
 	display: block;
 	margin: 0;
@@ -60,7 +61,6 @@ form, input, button, select, option{
 	background-color: white;
 }
 input, select {
-	max-height: fit-content;
 	padding: 0.5rem;
 	border-radius: 5px;
 }
@@ -92,23 +92,6 @@ nav log-in {
 	margin-right: 2rem;
 	margin-left: auto;
 }
-nav global-nav {
-	height: 100%;
-}
-nav ul {
-	height: 100%;
-	list-style: none;
-}
-nav ul li {
-	padding: 0.5rem;
-	height: 100%;
-	display: inline-block;
-	margin-left: clamp(2rem, 6vw, 5rem);
-}
-nav ul li.currentPage {
-	background-color: white;
-	border-bottom: 2px solid var(--accent);
-}
 dialog {
 	border: none;
 	margin: auto;
@@ -120,7 +103,6 @@ dialog {
 	display: grid;
 	gap: 1rem;
 	padding: 1rem;
-	max-height: fit-content;
 	background-color: #eee;
 }
 /* utility classes */
