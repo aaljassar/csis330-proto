@@ -61,9 +61,11 @@ class Login extends HTMLElement {
 	logout() {
 		localStorage.removeItem('isAuthenticated')
 		localStorage.removeItem('username')
+		this.showLogin()
+	}
+	showLogin() {
 		this.querySelector('.user-info').classList.add('hidden')
 		this.querySelector('#show-login').classList.remove('hidden')
-	
 	}
 	hideLogin() {
 		this.querySelector('.username').textContent = JSON.parse(localStorage.getItem('username') )

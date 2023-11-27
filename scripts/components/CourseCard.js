@@ -61,6 +61,7 @@ const styleTemplate = /* html */ `
 }
 .course-card .header .tooltip .tooltip-content {
 	border: 1px solid #ddd;
+	border-radius: 5px;
 	margin-top: 1rem;
 	margin-left: 1rem;
 }

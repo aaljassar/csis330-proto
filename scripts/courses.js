@@ -1,8 +1,3 @@
-/*  TODO:
-		priority list
-		priority graph
-		animations
-*/
 import { setLocalData, getLocalData } from '/scripts/utils.js'
 import CourseCard from '/scripts/components/CourseCard.js'
 
