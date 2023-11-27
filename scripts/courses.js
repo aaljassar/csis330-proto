@@ -1,9 +1,7 @@
 /*  TODO:
-		allow assignment editing
+		priority list
 		priority graph
-		pdf reader
 		animations
-		overlap rows in addition to columns
 */
 import { setLocalData, getLocalData } from '/scripts/utils.js'
 import CourseCard from '/scripts/components/CourseCard.js'
@@ -18,9 +16,13 @@ document.querySelector('.course-form').addEventListener('submit', e => {
 	addCourse(courseData)
 	document.querySelector('#course-inputs').close()
 })
-document.querySelector('.card-container').addEventListener('remove-course', e => {
+document.addEventListener('remove-course', e => {
 	const cardElement = e.detail	
 	removeCourse(cardElement)
+})
+document.addEventListener('update-course', e => {
+	const cardElement = e.detail	
+	updateCourse(cardElement)
 })
 document.querySelector('.card-container').addEventListener('assignments-edited', e => {
 	const cardElement = e.detail	
@@ -37,8 +39,8 @@ document.addEventListener('DOMContentLoaded', init)
 
 function init() {
 	adjustLayout()
-	const isAuthenticated = getLocalData('isAuthenticated')
-	if (isAuthenticated === false) return
+	const isAuthenticated = true === getLocalData('isAuthenticated')
+	if (!isAuthenticated) return
 	courses.forEach(courseData => {
 		document.querySelector('.card-container').append(new CourseCard(courseData))
 	})
@@ -76,8 +78,12 @@ function removeCourse(cardElement) {
 	courses = courses.filter(course => course != courseData)
 	renderCourseCards()
 }
+function updateCourse(cardElement) {
+	courses.find( course => course.code == cardElement.id).assignments = cardElement.courseData.assignments
+	setLocalData('courses', courses)
+}
 function adjustLayout() {
-	const cardElements = document.querySelector('.card-container').children
+	const cardElements = document.querySelectorAll('.card-container > *')
 	for (let index = 1; index <= cardElements.length; index++) {
 		const card = cardElements[index - 1]
 
@@ -90,7 +96,11 @@ function adjustLayout() {
 		else card.classList.remove('visible')
 	}
 	for (let index = 1; index < cardElements.length; index++) {
-		if(cardElements[index].classList.contains('inactive')) {
+		const card = cardElements[index]
+		const column = index + 1
+		if(column == 4 || column == 8) card.classList.add('visible')
+		else card.classList.remove('visible')
+		if(card.classList.contains('inactive')) {
 			cardElements[index - 1].classList.add('visible')
 		}
 	}

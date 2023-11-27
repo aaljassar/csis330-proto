@@ -1,8 +1,5 @@
 const styleTemplate = /* html */ `
 <style>
-.course-card {
-	overflow: hidden;
-}
 .course-card.primary {
 	--color: var(--primary);
 	--color_faded: var(--primary_fade);
@@ -15,8 +12,14 @@ const styleTemplate = /* html */ `
 }
 .course-card {
 	box-shadow: 0.3rem 0.5rem 0 var(--color);
+	position: relative;
+	border-right:  2px solid white;
+	border-bottom: 2px solid white;
+	border-left:   1px solid #aaa;
+	border-top:    1px solid #aaa;
 }
 .course-card .header {
+	border-radius: 15px 15px 0 0;
 	background: var(--color);
 	color: var(--text);
 }
@@ -48,7 +51,7 @@ const styleTemplate = /* html */ `
 	cursor: pointer;
 	transition: opacity 0.2s ease;
 	background-color: var(--fade1);
-	border-bottom-right-radius: 10px;
+	border-radius: 15px 0;
 	padding: 0.5rem;
 	opacity: 0;
 }
@@ -69,17 +72,26 @@ const styleTemplate = /* html */ `
 	width: 13rem;
 	opacity: 0;
 }
-.course-card .assignment-list {
+.course-card .body.assignment-list {
+	display: grid;
+	grid-template-rows: repeat(6,1fr);
+	gap: 0.5rem;
 	padding: 0.5rem;
+	border-radius: 0 0 15px 15px;
 }
-.course-card .assignment-list .assignment {
+.body.assignment-list .assignment {
+	display: grid;
 	grid-template-columns: 50% 3ch 1ch 1fr;
 	gap: 0.5rem;
+	border-radius: 15px;
 }
-.sticky {
-	position: absolute;
-	top: 0;
-	left: 0;
+.body.assignment-list .assignment > * {
+	text-align: center;
+	border-bottom: 1px solid #333;
+}
+#save {
+	background: var(--color);
+	color: var(--text);
 }
 </style>
 `
@@ -105,24 +117,40 @@ class CourseCard extends HTMLElement {
 				<div class="tooltip sticky">
 					<i class="fa-solid fa-ellipsis"></i>
 					<dialog class="tooltip-content">
-						<button class="remove">Remove <i class="fa fa-trash"></i></button>
-						<button class="edit">Edit <i class="fa fa-edit"></i></button>
+						<button type="button" id="remove">Remove <i class="fa fa-trash"></i></button>
+						<button type="button" id="edit">Edit <i class="fa fa-edit"></i></button>
 					</dialog>
 				</div>
 			</div>
 			<ul class="body assignment-list"></ul>
+			<dialog id="assignment-modal">
+				<div class="modal-content">
+					<button type="button" id="save" class="save">Save Changes</button>
+				</div>
+			</dialog>
 		</div>
 		`
 		this.insertAdjacentHTML('beforeend', styleTemplate)
 		this.insertAdjacentHTML('beforeend', template)
-		this.querySelector('.remove').onclick = () => {
-			this.dispatchEvent(new CustomEvent('remove-course', {detail: this}))
-		}
-		this.querySelector('.tooltip').onclick = () => {
-			const dialog = this.querySelector('.tooltip-content')
-			if(dialog.open) dialog.close()
-			else dialog.show()
-		}
+		this.querySelector('.modal-content').prepend(new AssignmentForm(this.courseData.assignments))
+		this.addEventListener('click', e => {
+			if(e.target.classList.contains('tooltip')) {
+				const dialog = this.querySelector('.tooltip-content')
+				if(dialog.open) dialog.close()
+				else dialog.show()
+			}
+			if(e.target.id == 'remove') {
+				document.dispatchEvent(new CustomEvent('remove-course', {detail: this}))
+			}
+			if(e.target.id == 'edit') {
+				this.querySelector('#assignment-modal').showModal()
+			}
+			if(e.target.id == 'save') {
+				this.updateAssignments(this.querySelector('assignment-form').getAssignments())
+				document.dispatchEvent(new CustomEvent('update-course', {detail: this}))
+				this.querySelector('#assignment-modal').close()
+			}
+		})
 		this.#renderAssignments()
 	}
 	updateAssignments(assignments) {
@@ -131,14 +159,14 @@ class CourseCard extends HTMLElement {
 	}
 	#renderAssignments() {
 		const { assignments } = this.courseData
-		const list = this.querySelector('.assignment-list')
+		const list = this.querySelector('.body.assignment-list')
 		list.replaceChildren()
 		assignments.forEach(assignment => {
 			list.insertAdjacentHTML('beforeend', CourseCard.#createAssignment(assignment))
 		})
 	}
 	static #createAssignment(assignmentData) {
-		const {name, percent, due} = assignmentData
+		const { name, percent, due } = assignmentData
 		const dueShort = due.slice(5)
 		const assignmentTemplate = /* html */ `
 		<li class="assignment">

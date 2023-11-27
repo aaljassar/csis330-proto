@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="/styles/home.css">
 	<script defer src="/scripts/components/GlobalNav.js"></script>
 	<script defer src="/scripts/components/Login.js"></script>
+	<script type="module" src="/scripts/main.js"></script>
 </head>
 
 <body>
@@ -17,15 +18,20 @@
 		<global-nav></global-nav>
 		<log-in class="log-in"></log-in>
 	</nav>
-	<div class="hero-image">
+	<div class="hero-container">
 		<h1>Organize your courses in just a few minutes.</h1>
-		<button class="button-primary">Get Started</button>
+		<div class="hero-image">
+		</div>
+		<div class="hero-buttons">
+			<button class="button-primary">Get Started</button>
+			<button class="button-secondary">Learn More</button>
+		</div>
 	</div>
 </header>
+<main></main>
 <footer>
 	<nav><global-nav></global-nav></nav>
 </footer>
-<script defer src="/scripts/main.js"></script>
 </body>
 
 </html>

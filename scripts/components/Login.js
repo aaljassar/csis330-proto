@@ -4,7 +4,25 @@ class Login extends HTMLElement {
 	}
 	connectedCallback() {
 		this.innerHTML = /* html */ `
+		<style>
+			.user-info {
+				color: var(--secondary)
+			}
+			.username {
+				font-family: monospace;
+				text-transform: uppercase;
+			}
+			.logout {
+				padding: 0;
+				display: inline-block;
+				background: none;
+			}
+		</style>
 		<button class="button-primary" id="show-login">Log In</button>
+		<div class="user-info hidden">
+			Welcome, <span class="username"></span>
+			<button class="logout"><small><em>Log Out</em></small></button>
+		</div>
 		<dialog> 
 			<div class="login-content modal-content">
 				<input id="username-input" type="text" placeholder="Username" />
@@ -14,24 +32,43 @@ class Login extends HTMLElement {
 		</dialog>
 		`
 		this.querySelector('#show-login').onclick = () => this.querySelector('dialog').showModal()
+		this.querySelector('.logout').onclick = () => this.logout()
 		this.querySelector('#submit').onclick = () => {
-			if(!this.checkAuth()) {
+			if(!this.isValid()) {
 				return alert('missing username or password')
 			}
+			this.login()
 			this.querySelector('dialog').close()
 		}
-		const isAuth = true === JSON.parse(localStorage.getItem('isAuthenticated'))
-		if(isAuth) this.querySelector('#show-login').style.display = 'none'
-		document.addEventListener('login', () => this.querySelector('#show-login').style.display = 'none')
+		const isAuthenticated = true === JSON.parse(localStorage.getItem('isAuthenticated'))
+		if(isAuthenticated) this.hideLogin()
 	}
-	checkAuth = () => {
+	isValid() {
 		const username = this.querySelector('#username-input').value
 		const password = this.querySelector('#password-input').value
 		if (!username || !password) return false
-		document.dispatchEvent(new CustomEvent('login'))
-		const isAuthenticated = true
-		localStorage.setItem('isAuthenticated', JSON.stringify(isAuthenticated) )
 		return true
+	}
+	login() {
+		const username = this.querySelector('#username-input').value
+		const isAuthenticated = true
+		this.querySelector('.username').textContent = username
+		localStorage.setItem('isAuthenticated', JSON.stringify(isAuthenticated) )
+		localStorage.setItem('username', JSON.stringify(username) )
+		document.dispatchEvent(new CustomEvent('login'))
+		this.hideLogin()
+	}
+	logout() {
+		localStorage.removeItem('isAuthenticated')
+		localStorage.removeItem('username')
+		this.querySelector('.user-info').classList.add('hidden')
+		this.querySelector('#show-login').classList.remove('hidden')
+	
+	}
+	hideLogin() {
+		this.querySelector('.username').textContent = JSON.parse(localStorage.getItem('username') )
+		this.querySelector('.user-info').classList.remove('hidden')
+		this.querySelector('#show-login').classList.add('hidden')
 	}
 }
 customElements.define('log-in', Login)
