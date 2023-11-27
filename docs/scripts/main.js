@@ -1,3 +1,3 @@
 document.addEventListener('login', () => {
-	window.location.href = '/views/courses.html'
+	window.location.href = '/csis330-proto/views/courses.html'
 })

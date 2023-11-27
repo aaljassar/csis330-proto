@@ -16,11 +16,11 @@ template.innerHTML = /* html */ `
 }
 </style>
 <ul class="links">
-	<li><a href="/">Home</a></li>
-	<li><a href="/views/courses.html">Courses</a></li>
-	<li><a href="/views/gpa.html">GPA Calc</a></li>
-	<li><a href="/views/blog.html">Blog</a></li>
-	<li><a href="/views/about.html">About</a></li>
+	<li><a href="/csis330-proto/">Home</a></li>
+	<li><a href="/csis330-proto/views/courses.html">Courses</a></li>
+	<li><a href="/csis330-proto/views/gpa.html">GPA Calc</a></li>
+	<li><a href="/csis330-proto/views/blog.html">Blog</a></li>
+	<li><a href="/csis330-proto/views/about.html">About</a></li>
 </ul>
 `
 class GlobalNav extends HTMLElement {

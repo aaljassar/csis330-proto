@@ -1,5 +1,5 @@
 import { setLocalData, getLocalData } from '/scripts/utils.js'
-import CourseCard from '/scripts/components/CourseCard.js'
+import CourseCard from '/csis330-proto/scripts/components/CourseCard.js'
 
 const addCourseButton = document.querySelector('#add-course')
 let courses = getLocalData('courses') || []
