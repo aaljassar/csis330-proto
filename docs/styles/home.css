@@ -1,0 +1,12 @@
+.hero-container {
+	padding: 0 clamp(1rem, 5vw, 8rem);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.hero-image {
+}
+.hero-buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
