@@ -33,9 +33,16 @@ document.addEventListener('login', init)
 document.addEventListener('DOMContentLoaded', init)
 
 function init() {
-	adjustLayout()
 	const isAuthenticated = true === getLocalData('isAuthenticated')
-	if (!isAuthenticated) return
+	if (!isAuthenticated) {
+		for (let i = 0; i < 8; i++) {
+			const blank = document.createElement('div')
+			blank.classList.add('card', 'blank')
+			document.querySelector('.card-container').append(blank)
+			renderCourseCards()
+			return
+		}
+	}
 	courses.forEach(courseData => {
 		document.querySelector('.card-container').append(new CourseCard(courseData))
 	})

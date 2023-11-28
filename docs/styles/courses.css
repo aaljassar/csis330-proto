@@ -141,3 +141,8 @@ course-card:hover .header .name {
 course-card:hover .header .tooltip {
 	opacity: 1;
 }
+.blank {
+	background-color: white;
+	border: 5px solid var(--accent);
+	border-radius: 15px;
+}
