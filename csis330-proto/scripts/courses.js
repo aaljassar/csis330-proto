@@ -2,6 +2,7 @@ import { setLocalData, getLocalData } from '/csis330-proto/scripts/utils.js'
 import CourseCard from '/csis330-proto/scripts/components/CourseCard.js'
 
 const addCourseButton = document.querySelector('#add-course')
+const cardContainer = document.querySelector('.card-container')
 let courses = getLocalData('courses') || []
 
 document.querySelector('.course-form').addEventListener('submit', e => {
@@ -19,12 +20,12 @@ document.addEventListener('update-course', e => {
 	const cardElement = e.detail	
 	updateCourse(cardElement)
 })
-document.querySelector('.card-container').addEventListener('assignments-edited', e => {
+cardContainer.addEventListener('assignments-edited', e => {
 	const cardElement = e.detail	
 	const course = courses.find(course => course.code == cardElement.id)
 	course.assignments = cardElement.courseData.assignments
 })
-document.querySelector('.card-container').addEventListener('click', e => {
+cardContainer.addEventListener('click', e => {
 	if(e.target.id == 'add-course') {
 		document.querySelector('#course-inputs').showModal()
 	}
@@ -35,16 +36,20 @@ document.addEventListener('DOMContentLoaded', init)
 function init() {
 	const isAuthenticated = true === getLocalData('isAuthenticated')
 	if (!isAuthenticated) {
+		addCourseButton.remove()
 		for (let i = 0; i < 8; i++) {
 			const blank = document.createElement('div')
 			blank.classList.add('card', 'blank')
-			document.querySelector('.card-container').append(blank)
-			renderCourseCards()
-			return
+			cardContainer.append(blank)
 		}
+		adjustLayout()
+		return
 	}
+	document.querySelector('#login-hint').classList.add('hidden')
+	const blankCards = cardContainer.querySelectorAll('.card.blank')
+	blankCards.forEach(card => card.remove())
 	courses.forEach(courseData => {
-		document.querySelector('.card-container').append(new CourseCard(courseData))
+		cardContainer.append(new CourseCard(courseData))
 	})
 	renderCourseCards()
 }
@@ -65,11 +70,11 @@ function readForm() {
 }
 function addCourse(courseData) {
 	courses.push(courseData)
-	document.querySelector('.card-container').append(new CourseCard(courseData))
+	cardContainer.append(new CourseCard(courseData))
 	renderCourseCards()
 }
 function renderCourseCards() {
-	if(courses.length < 8) document.querySelector('.card-container').append(addCourseButton)
+	if(courses.length < 8) cardContainer.append(addCourseButton)
 	else addCourseButton.remove()
 	setLocalData('courses', courses)
 	adjustLayout()

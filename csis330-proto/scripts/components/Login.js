@@ -20,13 +20,14 @@ class Login extends HTMLElement {
 		</style>
 		<button class="button-primary" id="show-login">Log In</button>
 		<div class="user-info hidden">
-			Welcome, <span class="username"></span>
+			Hi, <span class="username"></span>
 			<button class="logout"><small><em>Log Out</em></small></button>
 		</div>
 		<dialog> 
 			<div class="login-content modal-content">
 				<input id="username-input" type="text" placeholder="Username" />
 				<input id="password-input" type="password" placeholder="Password" />
+				<small><em>Do not use your real password.</em></small>
 				<button id="submit" class="button-primary">Submit</button>
 			</div>
 		</dialog>
