@@ -41,7 +41,7 @@ class CourseSelect extends HTMLElement {
 			this.courseCategories = JSON.parse(stored)
 			return this.renderCategories()
 		}
-		fetch('/assets/categorized_courses.json')
+		fetch('../../assets/categorized_courses.json')
 		.then(response => response.json())
 		.then(data => {
 			localStorage.setItem('courseCategories', JSON.stringify(data) )

@@ -4,14 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="/styles/globals.css">
-	<link rel="stylesheet" href="/styles/courses.css">
-	<script defer src="/scripts/components/GlobalNav.js"></script>
-	<script defer src="/scripts/components/Login.js"></script>
-	<script defer src="/scripts/components/CourseSelect.js"></script>
-	<script defer src="/scripts/components/AssignmentForm.js"></script>
-	<script type="module" src="/scripts/courses.js"></script>
+	<title>Course View</title>
+	<link rel="stylesheet" href="../styles/globals.css">
+	<link rel="stylesheet" href="../styles/courses.css">
+	<script defer src="../scripts/components/GlobalNav.js"></script>
+	<script defer src="../scripts/components/Login.js"></script>
+	<script defer src="../scripts/components/CourseSelect.js"></script>
+	<script defer src="../scripts/components/AssignmentForm.js"></script>
+	<script type="module" src="../scripts/courses.js"></script>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
 
 		<section class="course-organizer">
 			<div class="courses-header">
-				<h2 class="no-wrap">Add your <em class="gradient-text">courses</em></h2>
+				<h2 id="login-hint" class="no-wrap">Log in to add your <em class="gradient-text">courses</em></h2>
 			</div>
 			<div class="line"></div>
 			<dialog id="course-inputs">
@@ -59,6 +59,7 @@
 					<i class="fa fa-plus-square"></i>
 				</button>
 			</div>
+			<div id="graph-container"></div>
 		</section>
 		<aside class="side-articles">
 			<h4>Featured Article</h4>

@@ -89,6 +89,12 @@ aside .tips a {
 	aspect-ratio: 10/16;
 	border-radius: 15px;
 }
+.blank {
+	background-color: white;
+	border: 5px solid var(--accent);
+	width: 14rem;
+	border-radius: 15px;
+}
 .inactive:not(:first-child) {
 	color: black;
 	background: rgba(255, 255, 255, 0.4);
