@@ -1,4 +1,4 @@
-class Login extends HTMLElement {
+class GlobalLogin extends HTMLElement {
 	constructor() {
 		super()
 	}
@@ -21,7 +21,7 @@ class Login extends HTMLElement {
 		<button class="button-primary" id="show-login">Log In</button>
 		<div class="user-info hidden">
 			Hi, <span class="username"></span>
-			<button class="logout"><small><em>Log Out</em></small></button>
+			<button id="logout" class="logout"><small><em>Log Out</em></small></button>
 		</div>
 		<dialog> 
 			<div class="login-content modal-content">
@@ -33,7 +33,7 @@ class Login extends HTMLElement {
 		</dialog>
 		`
 		this.querySelector('#show-login').onclick = () => this.querySelector('dialog').showModal()
-		this.querySelector('.logout').onclick = () => this.logout()
+		this.querySelector('#logout').onclick = () => this.logout()
 		this.querySelector('#submit').onclick = () => {
 			if(!this.isValid()) {
 				return alert('missing username or password')
@@ -74,4 +74,4 @@ class Login extends HTMLElement {
 		this.querySelector('#show-login').classList.add('hidden')
 	}
 }
-customElements.define('log-in', Login)
+customElements.define('global-login', GlobalLogin)

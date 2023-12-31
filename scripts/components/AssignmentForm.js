@@ -55,7 +55,7 @@ class AssignmentForm extends HTMLElement {
 			assignmentElement.querySelector('.due').value = assignment.due
 		})
 		if(this.#assignments.length === 0){
-			for(let i = 0; i < 4; i++) this.#appendAssignmentRow()
+			for (let i = 0; i < 4; i++) this.#appendAssignmentRow()
 		}
 	}
 	getAssignments() {
@@ -67,20 +67,22 @@ class AssignmentForm extends HTMLElement {
 	}
 	#resetForm() {
 		this.querySelectorAll('.assignment').forEach(element => element.remove())
-		for(let i = 0; i < 4; i++) this.#appendAssignmentRow()
+		for (let i = 0; i < 4; i++) this.#appendAssignmentRow()
 		this.#renderAssignments()
 	}
 	#readAssignments() {
 		const assignmentElements = this.querySelectorAll('.assignment')
 		const assignments = []
 		let percentSum = 0
-		for (const assignment of assignmentElements) {
-			const name = assignment.querySelector('.name').value
-			const percent = assignment.querySelector('.percent').value
-			const due = assignment.querySelector('.due').value
+		for (const input of assignmentElements) {
+			const name = input.querySelector('.name').value
+			const percent = input.querySelector('.percent').value
+			const due = input.querySelector('.due').value
 			const percentNum = parseInt(percent)
-			if(!isNaN(percentNum)) percentSum += percentNum
-			assignments.push({ name, percent, due, weight: 0 })
+			if (!isNaN(percentNum)) {
+				percentSum += percentNum
+				assignments.push({ name, percent, due, weight: 0 })
+			}
 		}
 		if(percentSum == 100) this.#isValid = true
 		else this.#isValid = false

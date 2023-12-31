@@ -5,20 +5,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Course View</title>
-	<link rel="stylesheet" href="/csis330-proto/styles/globals.css">
-	<link rel="stylesheet" href="/csis330-proto/styles/courses.css">
-	<script defer src="/csis330-proto/scripts/components/GlobalNav.js"></script>
-	<script defer src="/csis330-proto/scripts/components/Login.js"></script>
-	<script defer src="/csis330-proto/scripts/components/CourseSelect.js"></script>
-	<script defer src="/csis330-proto/scripts/components/AssignmentForm.js"></script>
-	<script type="module" src="/csis330-proto/scripts/courses.js"></script>
+	<link rel="stylesheet" href="../styles/globals.css">
+	<link rel="stylesheet" href="../styles/courses.css">
+	<script defer src="../scripts/components/GlobalNav.js"></script>
+	<script defer src="../scripts/components/GlobalLogin.js"></script>
+	<script defer src="../scripts/components/CourseSelect.js"></script>
+	<script defer src="../scripts/components/AssignmentForm.js"></script>
+	<script type="module" src="../scripts/courses.js"></script>
 </head>
 
 <body>
 	<header>
 		<nav class="top-nav">
 			<global-nav></global-nav>
-			<log-in class="log-in"></log-in>
+			<global-login class="global-login"></global-login>
 		</nav>
 	</header>
 	<main class="flex-3col">
@@ -59,6 +59,7 @@
 					<i class="fa fa-plus-square"></i>
 				</button>
 			</div>
+			<div id="graph-container"></div>
 		</section>
 		<aside class="side-articles">
 			<h4>Featured Article</h4>
