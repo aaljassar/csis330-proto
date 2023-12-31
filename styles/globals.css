@@ -58,7 +58,7 @@ small {font-size: 0.8rem; /* 12.8px */}
 small {
 	color: darkslategrey;
 }
-/* override default form default styles */
+/* override default form styles */
 form, input, button, select, option{
 	display: block;
 	margin: 0;
@@ -91,7 +91,7 @@ nav {
 	display: flex;
 	align-items: center;
 }
-nav log-in {
+nav global-login {
 	margin-right: 2rem;
 	margin-left: auto;
 }

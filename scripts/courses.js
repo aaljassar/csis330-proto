@@ -1,5 +1,6 @@
 import { setLocalData, getLocalData } from '../scripts/utils.js'
 import CourseCard from '../scripts/components/CourseCard.js'
+import BubbleGraph from '../scripts/components/BubbleGraph.js'
 
 const addCourseButton = document.querySelector('#add-course')
 const cardContainer = document.querySelector('.card-container')
@@ -8,9 +9,10 @@ let courses = getLocalData('courses') || []
 document.querySelector('.course-form').addEventListener('submit', e => {
 	e.preventDefault()
 	const courseData = readForm()
-	if(!courseData) return
-	addCourse(courseData)
-	document.querySelector('#course-inputs').close()
+	if (courseData) {
+		addCourse(courseData)
+		document.querySelector('#course-inputs').close()
+	}
 })
 document.addEventListener('remove-course', e => {
 	const cardElement = e.detail	
@@ -48,10 +50,15 @@ function init() {
 	document.querySelector('#login-hint').classList.add('hidden')
 	const blankCards = cardContainer.querySelectorAll('.card.blank')
 	blankCards.forEach(card => card.remove())
+	const assignments = []
 	courses.forEach(courseData => {
+		calcWeights(courseData)
+		courseData.assignments.map(assignment => {assignment.code = courseData.code})
+		assignments.push(...courseData.assignments)
 		cardContainer.append(new CourseCard(courseData))
 	})
 	renderCourseCards()
+	document.querySelector('#graph-container').append(new BubbleGraph(assignments))
 }
 function readForm() {
 	const assignmentForm = document.querySelector('#course-inputs assignment-form')
@@ -66,7 +73,20 @@ function readForm() {
 		alert('Assignment data is invalid, ensure that percentages add up to 100%')
 		return null
 	}
+	calcWeights(courseData)
 	return courseData
+}
+function calcWeights(courseData) {
+	const { credits, assignments } = courseData
+	const now = new Date()
+	const msPerDay = 1000 * 60 * 60 * 24
+	assignments.map(assignment => {
+		const { percent, due } = assignment
+		if (percent && due) {
+			const daysLeft = Math.floor((new Date(due) - now) / msPerDay)
+			assignment.weight = percent * credits - daysLeft
+		}
+	})
 }
 function addCourse(courseData) {
 	courses.push(courseData)
@@ -74,41 +94,41 @@ function addCourse(courseData) {
 	renderCourseCards()
 }
 function renderCourseCards() {
-	if(courses.length < 8) cardContainer.append(addCourseButton)
+	if (courses.length < 8) cardContainer.append(addCourseButton)
 	else addCourseButton.remove()
 	setLocalData('courses', courses)
 	adjustLayout()
 }
 function removeCourse(cardElement) {
-	const courseData = courses.find( course => course.code == cardElement.id)
+	const courseData = courses.find(course => course.code == cardElement.id)
 	cardElement.remove()
 	courses = courses.filter(course => course != courseData)
 	renderCourseCards()
 }
 function updateCourse(cardElement) {
-	courses.find( course => course.code == cardElement.id).assignments = cardElement.courseData.assignments
+	courses.find(course => course.code == cardElement.id).assignments = cardElement.courseData.assignments
 	setLocalData('courses', courses)
 }
 function adjustLayout() {
 	const cardElements = document.querySelectorAll('.card-container > *')
-	for (let index = 1; index <= cardElements.length; index++) {
-		const card = cardElements[index - 1]
+	for (let i = 1; i <= cardElements.length; i++) {
+		const card = cardElements[i - 1]
 
-		const row = index <= 4 ? 1 : 2
-		const column = row == 1 ? index : index - 4
+		const row = i <= 4 ? 1 : 2
+		const column = row == 1 ? i : i - 4
 		card.style.gridRow = row
 		card.style.gridColumn = `${column} / ${column + 2}`
 
-		if(index == 4 || index == 8) card.classList.add('visible')
+		if (i == 4 || i == 8) card.classList.add('visible')
 		else card.classList.remove('visible')
 	}
-	for (let index = 1; index < cardElements.length; index++) {
-		const card = cardElements[index]
-		const column = index + 1
-		if(column == 4 || column == 8) card.classList.add('visible')
+	for (let i = 1; i < cardElements.length; i++) {
+		const card = cardElements[i]
+		const column = i + 1
+		if (column == 4 || column == 8) card.classList.add('visible')
 		else card.classList.remove('visible')
-		if(card.classList.contains('inactive')) {
-			cardElements[index - 1].classList.add('visible')
+		if (card.classList.contains('inactive')) {
+			cardElements[i - 1].classList.add('visible')
 		}
 	}
 }
