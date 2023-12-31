@@ -80,7 +80,7 @@ class BubbleGraph extends HTMLElement {
 
 		const simulation = d3.forceSimulation()
 			.force("center", d3.forceCenter().x(Math.floor(width / 2)).y(Math.floor(height / 2)))
-			.force("charge", d3.forceManyBody().strength(3000))
+			.force("charge", d3.forceManyBody().strength(300))
 			.force("collide", d3.forceCollide().strength(.8).radius(d => size(d.weight)+3).iterations(1))
 		
 		simulation

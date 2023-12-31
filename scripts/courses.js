@@ -83,8 +83,10 @@ function calcWeights(courseData) {
 	assignments.map(assignment => {
 		const { percent, due } = assignment
 		if (percent && due) {
-			const daysLeft = Math.floor((new Date(due) - now) / msPerDay)
-			assignment.weight = percent * credits - daysLeft
+			const dueDate = new Date(due)
+			const daysLeft = Math.round((dueDate - now) / msPerDay)
+			const weight = percent * credits - daysLeft
+			assignment.weight = weight > 0 ? weight : 0
 		}
 	})
 }
