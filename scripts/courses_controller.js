@@ -50,15 +50,19 @@ function init() {
 	document.querySelector('#login-hint').classList.add('hidden')
 	const blankCards = cardContainer.querySelectorAll('.card.blank')
 	blankCards.forEach(card => card.remove())
-	const assignments = []
-	courses.forEach(courseData => {
-		calcWeights(courseData)
-		courseData.assignments.map(assignment => {assignment.code = courseData.code})
-		assignments.push(...courseData.assignments)
+	courses.map(courseData => {
 		cardContainer.append(new CourseCard(courseData))
 	})
 	renderCourseCards()
-	document.querySelector('#graph-container').append(new BubbleGraph(assignments))
+}
+function collectAssignments() {
+	const assignments = []
+	courses.map(courseData => {
+		calcWeights(courseData)
+		courseData.assignments.map(assignment => {assignment.code = courseData.code})
+		assignments.push(...courseData.assignments)
+	})
+	return assignments
 }
 function readForm() {
 	const assignmentForm = document.querySelector('#course-inputs assignment-form')
@@ -98,6 +102,9 @@ function addCourse(courseData) {
 function renderCourseCards() {
 	if (courses.length < 8) cardContainer.append(addCourseButton)
 	else addCourseButton.remove()
+	const width = document.querySelector('#graph-container').clientWidth
+	const height = document.querySelector('#graph-container').clientHeight
+	document.querySelector('bubble-graph').updateGraph(collectAssignments(), width, height)
 	setLocalData('courses', courses)
 	adjustLayout()
 }
@@ -109,6 +116,7 @@ function removeCourse(cardElement) {
 }
 function updateCourse(cardElement) {
 	courses.find(course => course.code == cardElement.id).assignments = cardElement.courseData.assignments
+	renderCourseCards()
 	setLocalData('courses', courses)
 }
 function adjustLayout() {

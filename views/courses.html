@@ -11,7 +11,7 @@
 	<script defer src="../scripts/components/GlobalLogin.js"></script>
 	<script defer src="../scripts/components/CourseSelect.js"></script>
 	<script defer src="../scripts/components/AssignmentForm.js"></script>
-	<script type="module" src="../scripts/courses.js"></script>
+	<script type="module" src="../scripts/courses_controller.js"></script>
 </head>
 
 <body>
@@ -27,9 +27,9 @@
 			<div class="line black"></div>
 			<h5>Links</h5>
 			<ul>
-				<li><a href="">Course organizer</a></li>
-				<li><a href="">Priority Graph</a></li>
-				<li><a href="">Articles</a></li>
+				<li><a href="#courses">Course</a></li>
+				<li><a href="#graph-container">Priority Graph</a></li>
+				<li><a href="#articles">Articles</a></li>
 			</ul>
 			<div class="line black"></div>
 			<h5>Due soon</h5>
@@ -54,14 +54,16 @@
 					<button type="submit" class="button-primary">Submit</button>
 				</form>
 			</dialog>
-			<div class="card-container">
+			<div id="courses" class="card-container">
 				<button id="add-course" class="card raise inactive">
 					<i class="fa fa-plus-square"></i>
 				</button>
 			</div>
-			<div id="graph-container"></div>
+			<div id="graph-container">
+				<bubble-graph></bubble-graph>
+			</div>
 		</section>
-		<aside class="side-articles">
+		<aside id="articles" class="side-articles">
 			<h4>Featured Article</h4>
 			<div class="line black"></div>
 			<article>
