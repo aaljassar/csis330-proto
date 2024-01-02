@@ -175,8 +175,15 @@ dialog {
 .hidden {
 	display: none;
 }
+.invisible {
+	opacity: 0;
+}
 .sticky {
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+.center-children {
+	display: flex;
+	justify-content: center;
 }

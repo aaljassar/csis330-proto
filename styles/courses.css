@@ -147,3 +147,7 @@ course-card:hover .header .name {
 course-card:hover .header .tooltip {
 	opacity: 1;
 }
+#graph-container {
+	min-width: 100%;
+	min-height: 25rem;
+}

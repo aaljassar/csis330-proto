@@ -2,9 +2,13 @@ import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@6/+esm'
 
 class BubbleGraph extends HTMLElement {
 	#assignments = []
-	constructor(assignments) {
+	#width = 480
+	#height = 480
+	constructor(assignments = [], width = 480, height = 480) {
 		super()
 		this.#assignments = assignments
+		this.#width = width
+		this.#height = height
 	}
 	connectedCallback() {
 		this.innerHTML = /* html */ `<div id="graph-view"></div>`
@@ -12,12 +16,13 @@ class BubbleGraph extends HTMLElement {
 	}
 	renderGraph() {
 		document.querySelector('#graph-view').replaceChildren()
+		if (this.#assignments.length == 0) return
 
 		// hides graph while it is being populated
-		document.querySelector('#graph-view').classList.add('hidden')
+		document.querySelector('#graph-view').classList.add('invisible')
 
-		const width  = 480
-		const height = 480
+		const width  = this.#width
+		const height = this.#height
 
 		const svg = d3.select("#graph-view")
 		.append("svg")
@@ -79,7 +84,7 @@ class BubbleGraph extends HTMLElement {
 			.on("mouseleave", mouseleave)
 
 		const simulation = d3.forceSimulation()
-			.force("center", d3.forceCenter().x(Math.floor(width / 2)).y(Math.floor(height / 2)))
+			.force("center", d3.forceCenter().x(width / 2).y(height / 2))
 			.force("charge", d3.forceManyBody().strength(300))
 			.force("collide", d3.forceCollide().strength(.8).radius(d => size(d.weight)+3).iterations(1))
 		
@@ -97,11 +102,13 @@ class BubbleGraph extends HTMLElement {
 		setTimeout(() => {
 			document
 				.querySelector('#graph-view')
-				.classList.remove('hidden')
+				.classList.remove('invisible')
 		}, 1500)
 	}
-	updateGraph(assignments) {
+	updateGraph(assignments, width, height) {
 		this.#assignments = assignments
+		this.#width = width
+		this.#height = height
 		this.renderGraph()
 	}
 }
